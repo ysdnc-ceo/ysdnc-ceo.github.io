@@ -1,32 +1,39 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>현장 분석 리포트 | (주)윤성디앤씨</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        body { font-family: "Pretendard Variable", Pretendard, sans-serif; }
-        #mobile-menu { transition: transform 0.3s ease-in-out; }
-        #mobile-menu.hidden { transform: translateX(100%); display: none; }
-    </style>
-</head>
-<body class="bg-gray-50 text-gray-900 overflow-x-hidden">
-
-    <nav class="bg-white shadow-sm sticky top-0 z-[100] border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="index.html" class="flex items-center gap-3">
-                <img src="logo.png" alt="로고" class="h-10 w-auto"> 
-                <span class="text-xl font-bold tracking-tight text-slate-800">(주)윤성디앤씨</span>
-            </a>
-            <button id="menu-btn" class="md:hidden text-2xl text-slate-800"><i class="fa-solid fa-bars"></i></button>
-            <ul class="hidden md:flex gap-8 font-semibold text-gray-700 text-sm items-center">
-                <li><a href="index.html" class="hover:text-blue-600 transition">홈</a></li>
-                <li><a href="service.html" class="hover:text-blue-600 transition">서비스</a></li>
-                <li><a href="portfolio.html" class="text-blue-600">현장정보</a></li>
-                <li><a href="report.html" class="bg-slate-900 text-white px-5 py-2.5 rounded-lg text-sm hover:bg-blue-700 transition">리포트 신청</a></li>
-            </ul>
+<main class="max-w-7xl mx-auto py-20 px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100 flex flex-col group hover:shadow-2xl transition-all duration-300">
+            <div class="relative h-72 overflow-hidden">
+                <img src="itower.png" alt="I-TOWER" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute top-5 left-5 bg-blue-600 text-white px-4 py-1.5 rounded-full text-xs font-bold shadow-lg">삼성 초밀착형</div>
+            </div>
+            <div class="p-8 flex-1 flex flex-col">
+                <h2 class="text-2xl font-black text-slate-900 mb-4 tracking-tight">고덕 지식공작소 I-TOWER</h2>
+                <p class="text-gray-600 text-sm mb-8 leading-relaxed italic">"삼성전자 P5 정문 2km, 도면 너머의 숨겨진 가치를 분석한 단독 리포트"</p>
+                
+                <div class="mt-auto">
+                    <a href="itower.html" class="block w-full bg-blue-600 text-white text-center py-4 rounded-xl font-bold hover:bg-slate-900 transition-colors shadow-md">
+                        상세 분석 리포트 보기 <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
         </div>
-        <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-white shadow-2xl z-[110] hidden
+
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100 flex flex-col group hover:shadow-2xl transition-all duration-300 border-t-4 border-t-orange-500">
+            <div class="relative h-72 overflow-hidden">
+                <img src="wtower.jpg" alt="W-TOWER" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute top-5 left-5 bg-orange-600 text-white px-4 py-1.5 rounded-full text-xs font-bold shadow-lg">초대형 물류 특화</div>
+            </div>
+            <div class="p-8 flex-1 flex flex-col">
+                <h2 class="text-2xl font-black text-slate-900 mb-4 tracking-tight">고덕 2차 W-TOWER</h2>
+                <p class="text-gray-600 text-sm mb-8 leading-relaxed italic">"13,800평 압도적 스케일, 지상 5층 도어투도어 시스템 전격 분석"</p>
+                
+                <div class="mt-auto">
+                    <a href="wtower.html" class="block w-full bg-orange-600 text-white text-center py-4 rounded-xl font-bold hover:bg-slate-900 transition-colors shadow-md">
+                        상세 분석 리포트 보기 <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
