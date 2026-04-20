@@ -6,48 +6,91 @@
     <title>I-TOWER 상세 분석 | (주)윤성디앤씨</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>body { font-family: "Pretendard Variable", sans-serif; }</style>
 </head>
 <body class="bg-gray-50 text-gray-900">
-    <nav class="bg-white p-4 shadow-sm sticky top-0 z-50">
+    <nav class="bg-white p-4 shadow-sm sticky top-0 z-50 border-b">
         <div class="max-w-4xl mx-auto flex justify-between items-center font-bold">
             <a href="portfolio.html" class="text-gray-400 hover:text-blue-600 transition">← 목록으로</a>
-            <span class="text-slate-800 tracking-tight">고덕 지식공작소 I-TOWER</span>
+            <span class="text-slate-800 tracking-tight">I-TOWER 상세 리포트</span>
             <div class="w-10"></div>
         </div>
     </nav>
 
     <main class="max-w-4xl mx-auto py-12 px-6">
-        <img src="itower2.png" class="w-full rounded-[2rem] shadow-2xl mb-12 border-4 border-white">
+        <div class="relative mb-12">
+            <img src="itower2.png" class="w-full rounded-[2.5rem] shadow-2xl border-4 border-white">
+            <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-8 py-3 rounded-full font-bold shadow-xl text-nowrap">
+                삼성 P5 정문 초밀착 비즈니스
+            </div>
+        </div>
         
-        <h1 class="text-4xl font-black text-slate-950 mb-8 leading-tight tracking-tight">
-            삼성 P5 초밀착 비즈니스,<br>
-            <span class="text-blue-500">"삼성전자 P5 정문 2km, 비지니스 속도와 자연의 휴식을 동시에"</span>
+        <h1 class="text-4xl md:text-5xl font-black text-slate-950 mb-12 mt-10 leading-tight tracking-tight text-center">
+            고덕 지식공작소 I-TOWER
         </h1>
+
+        <section class="bg-slate-900 text-white rounded-[2.5rem] p-8 md:p-12 mb-16 shadow-2xl relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-10 opacity-10">
+                <i class="fa-solid fa-handshake-angle text-9xl"></i>
+            </div>
+            <h3 class="text-2xl md:text-3xl font-extrabold mb-8 text-blue-400">
+                "도면만으로는 보이지 않는<br><span class="text-white">'최적의 호실'이 있습니다."</span>
+            </h3>
+            
+            <div class="space-y-6 relative z-10">
+                <div class="flex items-start gap-4 bg-white/5 p-6 rounded-2xl border border-white/10">
+                    <div class="bg-blue-600 p-3 rounded-lg flex-shrink-0"><i class="fa-solid fa-layer-group text-white"></i></div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-1">대형 사옥 필요 시</h4>
+                        <p class="text-gray-400 text-sm leading-relaxed text-nowrap">여러 호실을 하나로! (벽체 제거 및 통합 설계 컨설팅)</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4 bg-white/5 p-6 rounded-2xl border border-white/10">
+                    <div class="bg-blue-600 p-3 rounded-lg flex-shrink-0"><i class="fa-solid fa-chart-line text-white"></i></div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-1">소액 투자 희망 시</h4>
+                        <p class="text-gray-400 text-sm leading-relaxed">임대 수요가 가장 높은 '꿀호실' 선점 전략 제안</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4 bg-white/5 p-6 rounded-2xl border border-white/10">
+                    <div class="bg-blue-600 p-3 rounded-lg flex-shrink-0"><i class="fa-solid fa-industry text-white"></i></div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-1">업종 맞춤형 추천</h4>
+                        <p class="text-gray-400 text-sm leading-relaxed">하중 보강 및 층고 활용도가 높은 제조형 호실 매칭</p>
+                    </div>
+                </div>
+            </div>
+        </section>
         
-        <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-100 mb-12">
-            <p class="font-black text-blue-600 mb-6 flex items-center gap-2">
-                <span class="w-1 h-6 bg-blue-600 rounded-full"></span>■ 사업개요
+        <div class="bg-white p-8 rounded-[2.5rem] shadow-sm border border-gray-100 mb-12">
+            <p class="font-black text-blue-600 mb-6 flex items-center gap-2 uppercase tracking-widest text-sm">
+                <span class="w-1.5 h-1.5 bg-blue-600 rounded-full"></span> Business Overview
             </p>
-            <img src="itower.png" class="mx-auto border-4 border-gray-50 rounded-xl shadow-sm">
+            <img src="itower.png" class="mx-auto rounded-xl shadow-inner border">
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            <div class="bg-white p-6 rounded-[2rem] shadow-sm border border-gray-100 text-center">
-                <p class="font-bold text-slate-500 mb-4 tracking-tighter">2층 평면 분석</p>
-                <img src="i2f.png" class="rounded-xl border border-gray-50">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+            <div class="bg-white p-6 rounded-[2.5rem] shadow-sm border border-gray-100">
+                <p class="font-bold text-slate-400 mb-4 text-sm text-center">2층 평면 분석</p>
+                <img src="i2f.png" class="rounded-2xl border border-gray-50">
             </div>
-            <div class="bg-white p-6 rounded-[2rem] shadow-sm border border-gray-100 text-center">
-                <p class="font-bold text-slate-500 mb-4 tracking-tighter">5층 옥상정원 분석</p>
-                <img src="i5f.png" class="rounded-xl border border-gray-50">
+            <div class="bg-white p-6 rounded-[2.5rem] shadow-sm border border-gray-100">
+                <p class="font-bold text-slate-400 mb-4 text-sm text-center">5층 옥상정원 분석</p>
+                <img src="i5f.png" class="rounded-2xl border border-gray-50">
             </div>
         </div>
 
-        <div class="sticky bottom-8 z-40">
-            <a href="tel:1577-8664" class="block w-full bg-slate-950 text-white text-center py-6 rounded-2xl font-black text-xl shadow-2xl hover:bg-blue-600 transition-colors">
-                분양가 및 잔여호실 문의: 1577-8664
+        <div class="sticky bottom-8 z-50 px-2">
+            <a href="tel:1577-8664" class="block w-full bg-blue-600 text-white text-center py-6 rounded-2xl font-black text-xl shadow-2xl hover:bg-slate-900 transition-all transform hover:-translate-y-1">
+                <i class="fa-solid fa-phone-volume mr-2"></i> 맞춤형 호실 상담: 1577-8664
             </a>
         </div>
     </main>
+
+    <footer class="bg-white border-t py-12 px-6 text-center text-gray-400 text-sm">
+        <p class="font-bold text-slate-900 mb-2">(주)윤성디앤씨</p>
+        <p>대표이사: 강채원 | 평택시 고덕면 도시지원1길 49, W-tower 1층</p>
+    </footer>
 </body>
 </html>
