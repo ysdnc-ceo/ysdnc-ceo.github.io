@@ -8,37 +8,45 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
     <style>body { font-family: "Pretendard Variable", sans-serif; }</style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50 text-gray-900">
     <nav class="bg-white p-4 shadow-sm sticky top-0 z-50">
         <div class="max-w-4xl mx-auto flex justify-between items-center font-bold">
-            <a href="portfolio.html" class="text-gray-400">← 목록으로</a>
-            <span>I-TOWER 리포트</span>
+            <a href="portfolio.html" class="text-gray-400 hover:text-blue-600 transition">← 목록으로</a>
+            <span class="text-slate-800 tracking-tight">I-TOWER 리포트</span>
             <div class="w-10"></div>
         </div>
     </nav>
 
     <main class="max-w-4xl mx-auto py-12 px-6">
-        <img src="itower2.jpg" class="w-full rounded-3xl shadow-xl mb-12">
-        <h1 class="text-4xl font-black text-slate-900 mb-6">삼성 P5 초밀착 비즈니스,<br>고덕 지식공작소 I-TOWER</h1>
+        <img src="itower2.png" class="w-full rounded-[2rem] shadow-2xl mb-12 border-4 border-white">
         
-        <div class="bg-white p-6 rounded-2xl shadow-sm border mb-12 text-center">
-            <p class="font-bold text-blue-600 mb-4 text-left">■ 사업개요</p>
-            <img src="itower.png" class="mx-auto border shadow-sm">
+        <h1 class="text-4xl font-black text-slate-950 mb-8 leading-tight tracking-tight">
+            삼성 P5 초밀착 비즈니스,<br>
+            <span class="text-blue-600">고덕 지식공작소 I-TOWER</span>
+        </h1>
+        
+        <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-100 mb-12">
+            <p class="font-black text-blue-600 mb-6 flex items-center gap-2">
+                <span class="w-1 h-6 bg-blue-600 rounded-full"></span>■ 사업개요
+            </p>
+            <img src="itower.png" class="mx-auto border-4 border-gray-50 rounded-xl shadow-sm">
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-            <div class="bg-white p-6 rounded-2xl shadow-sm border text-center">
-                <p class="font-bold text-gray-500 mb-2">2층 평면 분석</p>
-                <img src="i2f.jpg" class="rounded-lg">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <div class="bg-white p-6 rounded-[2rem] shadow-sm border border-gray-100 text-center">
+                <p class="font-bold text-slate-500 mb-4 tracking-tighter">2층 평면 분석</p>
+                <img src="i2f.png" class="rounded-xl border border-gray-50">
             </div>
-            <div class="bg-white p-6 rounded-2xl shadow-sm border text-center">
-                <p class="font-bold text-gray-500 mb-2">5층 옥상정원 분석</p>
-                <img src="i5f.jpg" class="rounded-lg">
+            <div class="bg-white p-6 rounded-[2rem] shadow-sm border border-gray-100 text-center">
+                <p class="font-bold text-slate-500 mb-4 tracking-tighter">5층 옥상정원 분석</p>
+                <img src="i5f.png" class="rounded-xl border border-gray-50">
             </div>
         </div>
 
-        <div class="sticky bottom-6">
-            <a href="tel:1577-8664" class="block w-full bg-slate-900 text-white text-center py-5 rounded-2xl font-black text-xl shadow-2xl">분양가 및 잔여호실 문의: 1577-8664</a>
+        <div class="sticky bottom-8 z-40">
+            <a href="tel:1577-8664" class="block w-full bg-slate-950 text-white text-center py-6 rounded-2xl font-black text-xl shadow-2xl hover:bg-blue-600 transition-colors">
+                분양가 및 잔여호실 문의: 1577-8664
+            </a>
         </div>
     </main>
 </body>
