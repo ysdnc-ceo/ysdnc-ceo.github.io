@@ -98,11 +98,25 @@
         </div>
     </footer>
 
-    <a href="https://open.kakao.com/me/ysdnc_kcw" target="_blank" style="position: fixed; bottom: 25px; right: 25px; z-index: 9999;">
-        <div style="background-color: #FEE500; width: 55px; height: 55px; border-radius: 18px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/KakaoTalk_logo.svg" style="width: 32px; height: 32px;" alt="카톡상담">
-        </div>
-    </a>
+    <div class="fixed bottom-8 right-8 z-[9999] flex flex-col gap-3">
+        <a href="tel:1577-8664" class="hover:scale-110 transition-transform group relative">
+            <div class="bg-blue-600 w-14 h-14 rounded-2xl flex items-center justify-center shadow-2xl border border-blue-500">
+                <i class="fa-solid fa-phone text-white text-xl"></i>
+            </div>
+            <span class="absolute right-16 top-1/2 -translate-y-1/2 bg-blue-600 text-white text-xs font-bold px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity text-nowrap pointer-events-none shadow-md">
+                전화 상담
+            </span>
+        </a>
+
+        <a href="https://open.kakao.com/me/ysdnc_kcw" target="_blank" class="hover:scale-110 transition-transform group relative">
+            <div class="bg-[#FEE500] w-14 h-14 rounded-2xl flex items-center justify-center shadow-2xl">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/KakaoTalk_logo.svg" class="w-8 h-8" alt="카톡상담">
+            </div>
+            <span class="absolute right-16 top-1/2 -translate-y-1/2 bg-[#FEE500] text-slate-900 text-xs font-bold px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity text-nowrap pointer-events-none shadow-md">
+                카톡 상담
+            </span>
+        </a>
+    </div>
 
     <script>
         const menuBtn = document.getElementById('menu-btn');
