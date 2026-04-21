@@ -10,19 +10,42 @@
     <style>
         body { font-family: "Pretendard Variable", Pretendard, sans-serif; scroll-behavior: smooth; }
         .bg-overlay { background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.95)); }
+        #mobile-menu { transition: transform 0.3s ease-in-out; }
+        #mobile-menu.hidden { transform: translateX(100%); display: none; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900 overflow-x-hidden relative">
 
     <nav class="bg-white shadow-sm sticky top-0 z-[100] border-b border-gray-200">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-3">
-                <img src="logo.png" alt="로고" class="h-8 w-auto"> 
+                <img src="logo.png" alt="로고" class="h-10 w-auto"> 
                 <span class="text-xl font-bold tracking-tight text-slate-800">(주)윤성디앤씨</span>
             </a>
-            <a href="#cta-section" class="hidden md:inline-block bg-slate-900 text-white px-5 py-2 rounded-lg text-sm font-semibold hover:bg-slate-800 transition">
-                맞춤형 리포트 신청
-            </a>
+            
+            <button id="menu-btn" class="md:hidden text-2xl text-slate-800"><i class="fa-solid fa-bars"></i></button>
+            
+            <ul class="hidden md:flex gap-8 font-semibold text-gray-700 text-sm items-center">
+                <li><a href="index.html" class="hover:text-blue-600 transition">홈</a></li>
+                <li><a href="service.html" class="text-blue-600 border-b-2 border-blue-600 pb-1">서비스</a></li>
+                <li><a href="portfolio.html" class="hover:text-blue-600 transition">현장정보</a></li>
+                <li><a href="report.html" class="hover:text-blue-600 transition">리포트 신청</a></li>
+                <li>
+                    <a href="#cta-section" class="bg-slate-900 text-white px-5 py-2.5 rounded-lg text-sm hover:bg-slate-800 transition shadow-md">
+                        맞춤형 진단 신청
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-white shadow-2xl z-[110] hidden p-8">
+            <div class="flex justify-end mb-8"><button id="close-btn" class="text-2xl text-gray-500"><i class="fa-solid fa-xmark"></i></button></div>
+            <ul class="flex flex-col gap-6 font-semibold text-lg text-slate-800">
+                <li><a href="index.html">홈</a></li>
+                <li><a href="service.html" class="text-blue-600">서비스</a></li>
+                <li><a href="portfolio.html">현장정보</a></li>
+                <li><a href="report.html">리포트 신청</a></li>
+            </ul>
         </div>
     </nav>
 
@@ -53,7 +76,7 @@
             </div>
             <div class="bg-gray-50 rounded-2xl p-4 border border-gray-100 shadow-sm relative group">
                 <div class="absolute inset-0 bg-blue-600 rounded-2xl transform translate-x-2 translate-y-2 -z-10 transition-transform group-hover:translate-x-3 group-hover:translate-y-3"></div>
-                <img src="page2.png" alt="건축 원가 vs 시장가 비교 데이터" class="w-full h-auto rounded-xl border border-gray-200">
+                <img src="page2.png" alt="건축 원가 vs 시장가 비교 시뮬레이션 데이터" class="w-full h-auto rounded-xl border border-gray-200">
             </div>
         </div>
     </section>
@@ -66,19 +89,19 @@
             </div>
             
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-shadow">
+                <div class="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-shadow border-t-4 border-t-blue-600">
                     <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-2xl mb-6"><i class="fa-solid fa-chart-line"></i></div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-4">[Financial] 재무·세제 최적화</h3>
+                    <h3 class="text-xl font-bold text-slate-900 mb-4">[Financial]<br>재무·세제 최적화</h3>
                     <p class="text-gray-600 leading-relaxed text-sm">기업 상황별(과밀억제권역 이전, 신규 창업 등) 적용 가능한 세액 감면(조특법 제63조 등) 및 최적의 금융 레버리지 구조를 진단합니다.</p>
                 </div>
-                <div class="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-shadow">
+                <div class="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-shadow border-t-4 border-t-blue-600">
                     <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-2xl mb-6"><i class="fa-solid fa-server"></i></div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-4">[Data] 자산 가치 분석</h3>
+                    <h3 class="text-xl font-bold text-slate-900 mb-4">[Data]<br>자산 가치 분석</h3>
                     <p class="text-gray-600 leading-relaxed text-sm">삼성전자 P5 로드맵 기반, 입지적 수혜도와 신축 건축 원가 대비 저평가된 우량 마피 호실을 데이터에 근거하여 발굴합니다.</p>
                 </div>
-                <div class="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-shadow">
+                <div class="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-shadow border-t-4 border-t-blue-600">
                     <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-2xl mb-6"><i class="fa-solid fa-handshake"></i></div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-4">[Support] 올인원 케어</h3>
+                    <h3 class="text-xl font-bold text-slate-900 mb-4">[Support]<br>올인원 케어</h3>
                     <p class="text-gray-600 leading-relaxed text-sm">이전 목적의 이사회 결의 및 행정 절차 검토부터 대출 실행, 입주 후 사후관리(임대/전매 플랜)까지 통합 프로세스를 지원합니다.</p>
                 </div>
             </div>
@@ -87,8 +110,8 @@
 
     <section class="py-24 px-6 bg-slate-900 text-white">
         <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-            <div class="relative">
-                <div class="absolute -inset-4 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-[2rem] blur-lg opacity-30"></div>
+            <div class="relative group">
+                <div class="absolute -inset-4 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-[2rem] blur-lg opacity-30 group-hover:opacity-50 transition-opacity"></div>
                 <img src="page1.jpg" alt="법인세 감면 요약 리포트" class="relative rounded-2xl shadow-2xl border border-gray-700 w-full h-auto">
             </div>
             
@@ -97,21 +120,21 @@
                 <h2 class="text-3xl md:text-4xl font-black mb-8 leading-tight">CEO를 위한<br>4대 핵심 전략 보고서</h2>
                 
                 <div class="space-y-4">
-                    <div class="bg-slate-800/50 p-5 rounded-xl border border-slate-700 hover:bg-slate-800 transition">
-                        <h4 class="font-bold text-blue-300 mb-1">Report 01. [법인세]</h4>
-                        <p class="text-gray-300 text-sm">개정 세법 적용 9개년 세무 이익 시뮬레이션</p>
+                    <div class="bg-slate-800/80 p-6 rounded-xl border border-slate-700 hover:bg-slate-700 transition">
+                        <h4 class="font-bold text-blue-300 mb-1 text-lg">Report 01. [법인세]</h4>
+                        <p class="text-gray-300">개정 세법 적용 9개년 세무 이익 시뮬레이션</p>
                     </div>
-                    <div class="bg-slate-800/50 p-5 rounded-xl border border-slate-700 hover:bg-slate-800 transition">
-                        <h4 class="font-bold text-blue-300 mb-1">Report 02. [입지분석]</h4>
-                        <p class="text-gray-300 text-sm">삼성 P5 로드맵에 따른 업종별 수혜 분석</p>
+                    <div class="bg-slate-800/80 p-6 rounded-xl border border-slate-700 hover:bg-slate-700 transition">
+                        <h4 class="font-bold text-blue-300 mb-1 text-lg">Report 02. [입지분석]</h4>
+                        <p class="text-gray-300">삼성 P5 로드맵에 따른 업종별 수혜 분석</p>
                     </div>
-                    <div class="bg-slate-800/50 p-5 rounded-xl border border-slate-700 hover:bg-slate-800 transition">
-                        <h4 class="font-bold text-blue-300 mb-1">Report 03. [재무전략]</h4>
-                        <p class="text-gray-300 text-sm">임대료 대비 사옥 보유 시 유동성 변화 비교</p>
+                    <div class="bg-slate-800/80 p-6 rounded-xl border border-slate-700 hover:bg-slate-700 transition">
+                        <h4 class="font-bold text-blue-300 mb-1 text-lg">Report 03. [재무전략]</h4>
+                        <p class="text-gray-300">임대료 대비 사옥 보유 시 유동성 변화 비교</p>
                     </div>
-                    <div class="bg-slate-800/50 p-5 rounded-xl border border-slate-700 hover:bg-slate-800 transition">
-                        <h4 class="font-bold text-blue-300 mb-1">Report 04. [실무가이드]</h4>
-                        <p class="text-gray-300 text-sm">성공적인 거점 이동 및 신규 정착 Case Study</p>
+                    <div class="bg-slate-800/80 p-6 rounded-xl border border-slate-700 hover:bg-slate-700 transition">
+                        <h4 class="font-bold text-blue-300 mb-1 text-lg">Report 04. [실무가이드]</h4>
+                        <p class="text-gray-300">성공적인 거점 이동 및 신규 정착 Case Study</p>
                     </div>
                 </div>
             </div>
@@ -125,9 +148,14 @@
             <p class="text-blue-100 text-lg mb-10 leading-relaxed">
                 무분별한 제안이 아닌, 귀사의 재무 구조와 상황에 맞는<br>최적의 팩트 기반 데이터를 전달해 드립니다.
             </p>
-            <a href="portfolio.html" class="inline-block bg-slate-900 text-white px-10 py-5 rounded-2xl font-black text-xl hover:bg-slate-800 transition shadow-2xl hover:-translate-y-1 transform">
-                한정 물량 확인 <i class="fa-solid fa-angles-right ml-2"></i>
-            </a>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="portfolio.html" class="bg-slate-900 text-white px-8 py-4 rounded-xl font-black text-lg hover:bg-slate-800 transition shadow-2xl hover:-translate-y-1 transform">
+                    한정 물량 확인 <i class="fa-solid fa-angles-right ml-2"></i>
+                </a>
+                <a href="https://open.kakao.com/me/ysdnc_kcw" target="_blank" class="bg-[#FEE500] text-slate-900 px-8 py-4 rounded-xl font-black text-lg hover:scale-105 transition shadow-2xl">
+                    <i class="fa-solid fa-comment mr-2"></i> 1:1 진단 문의
+                </a>
+            </div>
         </div>
     </section>
 
@@ -141,7 +169,7 @@
                 <div>
                     <h4 class="text-slate-900 text-xl font-black mb-2">(주)윤성디앤씨</h4>
                     <p class="text-gray-500 text-sm leading-loose">
-                        대표이사: 강채원 | 경기도 평택시 고덕면 도시지원1길 49, W-tower 1층<br>
+                        대표이사: 강채원 | 경기도 평택시 고덕면 도시지원1길 49, W-tower 1층 입주센터<br>
                         문의전화: 1577-8664 | 이메일: ysdnc.ceo@gmail.com
                     </p>
                 </div>
@@ -153,8 +181,15 @@
     </footer>
 
     <a href="report.html" class="fixed bottom-8 right-8 z-[9999] bg-slate-900 text-white font-bold px-6 py-4 rounded-full shadow-2xl hover:scale-105 transition-transform flex items-center gap-2 border border-slate-700">
-        <i class="fa-solid fa-file-pdf"></i> 리포트 신청
+        <i class="fa-solid fa-file-pdf text-red-400"></i> 리포트 신청
     </a>
 
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => { mobileMenu.classList.remove('hidden'); });
+        closeBtn.addEventListener('click', () => { mobileMenu.classList.add('hidden'); });
+    </script>
 </body>
 </html>
