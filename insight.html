@@ -8,136 +8,139 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="logo.png" type="image/png">
     <style>
-        body { font-family: 'Noto Sans KR', sans-serif; }
-        .insight-card { transition: all 0.3s ease; border: 1px solid #e5e7eb; }
-        .insight-card:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
+        body { font-family: 'Noto Sans KR', sans-serif; scroll-behavior: smooth; }
+        .insight-card { transition: all 0.3s ease; border: 1px solid #f3f4f6; }
+        .insight-card:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05); border-color: #3b82f6; }
         .data-value { font-family: 'Inter', sans-serif; }
-        .gradient-bg { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); }
-        /* 스무스 스크롤 효과 */
-        html { scroll-behavior: smooth; }
+        .gradient-header { background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); }
     </style>
 </head>
 <body class="bg-white text-gray-900">
 
-    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center">
-                <img src="logo.png" alt="윤성D&C" class="h-10 w-auto mr-2">
-            </a>
+            <a href="index.html"><img src="logo.png" alt="윤성D&C" class="h-10 w-auto"></a>
             <div class="hidden md:flex space-x-8 font-medium">
-                <a href="index.html" class="hover:text-blue-600 transition">홈</a>
-                <a href="service.html" class="hover:text-blue-600 transition">서비스</a>
-                <a href="site-info.html" class="hover:text-blue-600 transition">현장정보</a>
-                <a href="index.html#report" class="hover:text-blue-600 transition">리포트신청</a>
-                <a href="insight.html" class="text-blue-600 font-bold">마켓 인사이트</a>
+                <a href="index.html" class="hover:text-blue-600 transition text-gray-500">홈</a>
+                <a href="service.html" class="hover:text-blue-600 transition text-gray-500">서비스</a>
+                <a href="insight.html" class="text-blue-600 font-bold border-b-2 border-blue-600">마켓 인사이트</a>
+                <a href="portfolio.html" class="hover:text-blue-600 transition text-gray-500">현장정보</a>
+                <a href="index.html#report" class="hover:text-blue-600 transition text-gray-500">리포트신청</a>
             </div>
-            <a href="index.html#contact" class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-blue-700 transition">상담 신청</a>
+            <a href="index.html#contact" class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">상담 신청</a>
         </div>
     </nav>
 
-    <header class="gradient-bg py-24 text-white text-center">
+    <header class="gradient-header py-28 text-white text-center">
         <div class="container mx-auto px-6">
-            <h1 class="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Market Insight</h1>
-            <p class="text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 tracking-tighter italic">MARKET INSIGHT</h1>
+            <p class="text-xl text-blue-100/80 max-w-2xl mx-auto leading-relaxed font-light">
                 데이터는 이미 방향을 가리키고 있습니다.<br>
                 확신을 결정으로 바꾸는 객관적인 근거들을 확인하십시오.
             </p>
         </div>
     </header>
 
-    <section class="py-24 bg-gray-50">
+    <section class="py-24 bg-white">
         <div class="container mx-auto px-6">
-            <div id="insight-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-6">
+            <div id="insight-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-4">
                 </div>
-
-            <div class="text-right mb-16">
-                <p class="text-[10px] md:text-xs text-gray-400 leading-relaxed italic">
-                    ※ 데이터 근거: 삼성전자 「역동적 혁신성장을 위한 삼성의 미래 준비 계획」 공식 발표(2022.05), <br class="md:hidden">
-                    국토교통부·산업통상자원부 「반도체 메가 클러스터 조성 방안」(2024.01), 평택시 통계정보(2026.04) 기준.
+            <div class="text-right mb-24">
+                <p class="text-[10px] md:text-xs text-gray-400 italic">
+                    ※ 데이터 근거: 삼성전자 미래 준비 계획(2022.05), 반도체 메가 클러스터 조성 방안(2024.01), 평택시 통계(2026.04)
                 </p>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
-                    <p class="text-sm font-bold text-blue-600 mb-4 tracking-wider uppercase">Reference 01. 조세특례제한법 기반 세제 혜택</p>
-                    <img src="page1.jpg" alt="세제 혜택 시뮬레이션" class="w-full rounded-2xl shadow-inner">
-                    <p class="mt-4 text-sm text-gray-500">(과밀>>성장)본사 이전 시 법인세 6년 100%, 3년 50% 감면 (연 순이익 10억 기준 약 12억 절세)</p>
+
+            <div class="max-w-5xl mx-auto">
+                <div class="flex justify-between items-end mb-8 border-b-2 border-gray-900 pb-4">
+                    <div>
+                        <h3 class="text-2xl font-bold italic tracking-tighter">Latest Market Briefing</h3>
+                        <p class="text-sm text-gray-400 mt-1">평택 시장의 실시간 동향과 분석 리포트</p>
+                    </div>
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest hidden md:block font-serif">Updated Today</span>
                 </div>
-                <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
-                    <p class="text-sm font-bold text-blue-600 mb-4 tracking-wider uppercase">Reference 02. 건축 원가 대비 시장가 분석</p>
-                    <img src="page2.png" alt="공급가 원가 추이 그래프" class="w-full rounded-2xl shadow-inner">
-                    <p class="mt-4 text-sm text-gray-500">2026년 기준 건축 원가(1,400만) 대비 마이너스 프리미엄(600만)의 가격 왜곡 구간</p>
+                
+                <div class="divide-y divide-gray-100">
+                    <a href="#" class="group flex flex-col md:flex-row md:items-center justify-between py-8 px-4 hover:bg-gray-50 transition-all rounded-2xl">
+                        <div class="flex items-center space-x-6">
+                            <span class="text-blue-600 font-bold text-[10px] border border-blue-200 px-2 py-0.5 rounded uppercase tracking-tighter">SAMSUNG</span>
+                            <h4 class="text-lg font-bold group-hover:text-blue-600 transition">삼성전자 평택 P5 공정 재개와 협력사 입주 시기 분석</h4>
+                        </div>
+                        <div class="flex items-center space-x-4 mt-3 md:mt-0">
+                            <span class="text-gray-300 text-xs font-medium">2026.04.25</span>
+                            <span class="text-blue-600 opacity-0 group-hover:opacity-100 transition-all">→</span>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="group flex flex-col md:flex-row md:items-center justify-between py-8 px-4 hover:bg-gray-50 transition-all rounded-2xl">
+                        <div class="flex items-center space-x-6">
+                            <span class="text-blue-600 font-bold text-[10px] border border-blue-200 px-2 py-0.5 rounded uppercase tracking-tighter">TAX</span>
+                            <h4 class="text-lg font-bold group-hover:text-blue-600 transition">수도권 과밀억제권역 외 법인 이전 취득세 100% 감면 요건</h4>
+                        </div>
+                        <div class="flex items-center space-x-4 mt-3 md:mt-0">
+                            <span class="text-gray-300 text-xs font-medium">2026.04.20</span>
+                            <span class="text-blue-600 opacity-0 group-hover:opacity-100 transition-all">→</span>
+                        </div>
+                    </a>
+
+                    <a href="#" class="group flex flex-col md:flex-row md:items-center justify-between py-8 px-4 hover:bg-gray-50 transition-all rounded-2xl">
+                        <div class="flex items-center space-x-6">
+                            <span class="text-blue-600 font-bold text-[10px] border border-blue-200 px-2 py-0.5 rounded uppercase tracking-tighter">ESTATE</span>
+                            <h4 class="text-lg font-bold group-hover:text-blue-600 transition">고덕신도시 BRT 개통에 따른 인근 지식산업센터 시세 전망</h4>
+                        </div>
+                        <div class="flex items-center space-x-4 mt-3 md:mt-0">
+                            <span class="text-gray-300 text-xs font-medium">2026.04.15</span>
+                            <span class="text-blue-600 opacity-0 group-hover:opacity-100 transition-all">→</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="mt-16 text-center">
+                    <button class="px-10 py-4 bg-gray-900 text-white text-sm font-bold rounded-full hover:bg-blue-600 transition shadow-xl">브리핑 리포트 더보기 +</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-gray-900 text-gray-400 py-16">
+    <footer class="bg-gray-50 text-gray-400 py-20 border-t border-gray-100">
         <div class="container mx-auto px-6 text-center">
-            <img src="logo.png" alt="윤성D&C Logo" class="h-8 w-auto mx-auto mb-8 opacity-40 grayscale">
-            <div class="flex justify-center space-x-6 mb-8 text-sm">
-                <a href="#" class="hover:text-white transition">이용약관</a>
-                <a href="#" class="hover:text-white transition">개인정보처리방침</a>
-                <a href="index.html#contact" class="hover:text-white transition">찾아오시는 길</a>
-            </div>
-            <p class="text-xs tracking-widest uppercase">© 2026 (주)윤성 D&C. All Rights Reserved.</p>
+            <img src="logo.png" alt="Logo" class="h-8 mx-auto mb-8 opacity-40 grayscale">
+            <p class="text-[10px] uppercase tracking-[0.3em] mb-4">Integrity · Data · Strategy</p>
+            <p class="text-xs italic">© 2026 (주)윤성 D&C. All Rights Reserved.</p>
         </div>
     </footer>
 
     <script>
-        // 6. 데이터 객체: 삼성 450조 및 600만 원 데이터 반영
         const insightData = [
-            {
-                sub: "삼성의 결단",
-                title: "삼성전자 450조 전략 투자",
-                desc: "P4·P5 공정 가속화 및 P6 건설 확정. P5 단일 라인에만 60조 원 이상이 직접 투입되는 세계 최대의 투자 프로젝트입니다.",
-                val: 450, unit: "조 원"
-            },
-            {
-                sub: "미래 먹거리",
-                title: "엔비디아 HBM4 핵심 생산 기지",
-                desc: "AI 반도체 게임 체인저 HBM4 주력 거점. 7만 명의 전문 인력이 24시간 평택의 미래를 짓고 있습니다.",
-                val: 7, unit: "만 명"
-            },
-            {
-                sub: "수급 현황",
-                title: "미분양 무덤에서 인구 유입 1위로",
-                desc: "25년 1월 대비 26년 1월 미분양 50% 이상 광속 소진. 삼성의 움직임에 똑똑한 2040 세대가 먼저 반응했습니다.",
-                val: 54, unit: "%"
-            },
-            {
-                sub: "가격 분석",
-                title: "건축 원가보다 저렴한 마지막 구간",
-                desc: "신축 원가 평당 1,500만 원 vs 현재 마피 급매가 평당 600만 원 선. 다시는 올 수 없는 가격 역전 기회입니다.",
-                val: 600, unit: "만 원"
-            }
+            { sub: "SAMSUNG", title: "삼성전자 450조 전략 투자", val: 450, unit: "조 원", desc: "P4·P5 공정 가속화 및 P6 건설 확정. 평택 중심의 집중 투자가 이어집니다." },
+            { sub: "NVIDIA", title: "HBM4 핵심 생산 기지", val: 7, unit: "만 명", desc: "7만 명의 전문 인력이 투입된 글로벌 AI 반도체 전쟁의 심장부입니다." },
+            { sub: "MARKET", title: "미분양 1위에서 광속 소진으로", val: 54, unit: "%", desc: "25년 1월 대비 미분양 50% 이상 소진. 실수요 중심의 강력한 반등세." },
+            { sub: "VALUE", title: "건축 원가 이하의 가격 역전", val: 600, unit: "만 원", desc: "신축 원가 평당 1,500만 원 vs 현재 마피 급매가 평당 600만 원 선." }
         ];
 
-        // 7. 렌더링 함수
         function render() {
             const grid = document.getElementById('insight-grid');
             grid.innerHTML = insightData.map(item => `
-                <div class="insight-card bg-white p-8 rounded-3xl flex flex-col justify-between">
+                <div class="insight-card bg-white p-10 rounded-3xl flex flex-col justify-between border border-gray-100">
                     <div>
-                        <p class="text-blue-600 font-bold text-sm mb-2 tracking-wide">${item.sub}</p>
-                        <h3 class="text-xl font-bold mb-6 leading-tight h-14 text-gray-800">${item.title}</h3>
-                        <div class="mb-6">
-                            <span class="data-value text-4xl font-bold text-blue-900" data-target="${item.val}">0</span>
-                            <span class="text-gray-500 font-bold ml-1">${item.unit}</span>
+                        <p class="text-blue-600 font-bold text-[10px] mb-3 tracking-[0.2em] uppercase">${item.sub}</p>
+                        <h3 class="text-xl font-bold mb-8 leading-tight h-14 text-gray-800">${item.title}</h3>
+                        <div class="mb-8">
+                            <span class="data-value text-5xl font-bold text-blue-900" data-target="${item.val}">0</span>
+                            <span class="text-gray-400 font-bold ml-1 text-lg">${item.unit}</span>
                         </div>
                     </div>
-                    <p class="text-gray-500 text-sm leading-relaxed">${item.desc}</p>
+                    <p class="text-gray-500 text-xs leading-relaxed font-light">${item.desc}</p>
                 </div>
             `).join('');
         }
 
-        // 8. 숫자 카운팅 애니메이션
         function animate() {
             const counters = document.querySelectorAll('.data-value');
             counters.forEach(c => {
                 const target = +c.getAttribute('data-target');
                 let now = 0;
-                const step = target / 50; // 속도 조절
+                const step = target / 40;
                 const timer = setInterval(() => {
                     now += step;
                     if (now >= target) {
@@ -146,19 +149,15 @@
                     } else {
                         c.innerText = Math.floor(now).toLocaleString();
                     }
-                }, 20);
+                }, 25);
             });
         }
 
-        // 초기화 및 스크롤 이벤트
         render();
         let animated = false;
         window.addEventListener('scroll', () => {
-            const section = document.getElementById('insight-grid');
-            const position = section.getBoundingClientRect().top;
-            const screenHeight = window.innerHeight;
-
-            if (position < screenHeight * 0.8 && !animated) {
+            const pos = document.getElementById('insight-grid').getBoundingClientRect().top;
+            if (pos < window.innerHeight * 0.8 && !animated) {
                 animate();
                 animated = true;
             }
