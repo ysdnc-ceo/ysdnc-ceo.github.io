@@ -15,17 +15,36 @@
 </head>
 <body class="bg-gray-50 text-gray-900">
 
-    <nav class="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
-            <a href="index.html" class="flex items-center">
-                <img src="logo.png" alt="(주)윤성디앤씨 로고" class="h-12 w-auto"> 
+    <nav class="bg-white shadow-sm sticky top-0 z-[100] border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="logo.png" alt="로고" class="h-10 w-auto"> 
+                <span class="text-xl font-bold tracking-tight text-slate-800">(주)윤성디앤씨</span>
             </a>
-            <ul class="flex gap-8 font-semibold text-gray-700 text-sm">
-                <li><a href="index.html" class="hover:text-blue-600 transition">홈</a></li>
+
+            <ul class="hidden md:flex gap-8 font-semibold text-gray-700 text-sm items-center">
+                <li><a href="index.html" class="text-blue-600">홈</a></li>
                 <li><a href="service.html" class="hover:text-blue-600 transition">서비스</a></li>
                 <li><a href="insight.html" class="hover:text-blue-600 transition">마켓 인사이트</a></li>
                 <li><a href="portfolio.html" class="hover:text-blue-600 transition">현장정보</a></li>
-                <li><a href="report.html" class="text-blue-600 font-bold border-b-2 border-blue-600 pb-1">리포트 신청</a></li>
+                <li><a href="report.html" class="bg-slate-900 text-white px-5 py-2.5 rounded-lg text-sm hover:bg-blue-700 transition">리포트 신청</a></li>
+            </ul>
+
+            <button id="menu-btn" class="md:hidden text-2xl text-slate-800 focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-white shadow-2xl z-[110] hidden p-8">
+            <div class="flex justify-end mb-8">
+                <button id="close-btn" class="text-2xl text-slate-800"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <ul class="flex flex-col gap-6 font-semibold text-gray-700 text-lg">
+                <li><a href="index.html" class="text-blue-600">홈</a></li>
+                <li><a href="service.html">서비스</a></li>
+                <li><a href="insight.html" class="hover:text-blue-600 transition">마켓 인사이트</a>
+                <li><a href="portfolio.html">현장정보</a></li>
+                <li><a href="report.html" class="inline-block bg-slate-900 text-white px-4 py-2 rounded-lg text-center">리포트 신청</a></li>
             </ul>
         </div>
     </nav>
