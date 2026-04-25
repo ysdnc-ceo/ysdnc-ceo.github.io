@@ -14,6 +14,8 @@
         .insight-card:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05); border-color: #3b82f6; }
         .data-value { font-family: 'Inter', sans-serif; }
         .gradient-header { background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); }
+        /* 말줄임표 처리 (제목이 너무 길 때) */
+        .truncate-text { display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
     </style>
 </head>
 <body class="bg-white text-gray-900">
@@ -44,7 +46,6 @@
                     <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
-            
             <a href="index.html" class="block text-lg font-bold mb-6 hover:text-blue-600 transition">홈</a>
             <a href="service.html" class="block text-lg font-bold mb-6 hover:text-blue-600 transition">서비스</a>
             <a href="insight.html" class="block text-lg font-bold text-blue-600 mb-6 transition">마켓 인사이트</a>
@@ -66,7 +67,7 @@
     <section class="py-24 bg-white">
         <div class="container mx-auto px-6">
             <div id="insight-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-4">
-                </div>
+            </div>
             <div class="text-right mb-24">
                 <p class="text-[10px] md:text-xs text-gray-400 italic">
                     ※ 데이터 근거: 삼성전자 미래 준비 계획(2022.05), 반도체 메가 클러스터 조성 방안(2024.01), 평택시 통계(2026.04)
@@ -82,43 +83,15 @@
                     <span class="text-xs font-bold text-blue-600 uppercase tracking-widest hidden md:block font-serif">Updated Today</span>
                 </div>
                 
-                <div class="divide-y divide-gray-100">
-                    <a href="#" class="group flex flex-col md:flex-row md:items-center justify-between py-8 px-4 hover:bg-gray-50 transition-all rounded-2xl">
-                        <div class="flex items-center space-x-6">
-                            <span class="text-blue-600 font-bold text-[10px] border border-blue-200 px-2 py-0.5 rounded uppercase tracking-tighter">SAMSUNG</span>
-                            <h4 class="text-lg font-bold group-hover:text-blue-600 transition">삼성전자 평택 P5 공정 재개와 협력사 입주 시기 분석</h4>
-                        </div>
-                        <div class="flex items-center space-x-4 mt-3 md:mt-0">
-                            <span class="text-gray-300 text-xs font-medium">2026.04.25</span>
-                            <span class="text-blue-600 opacity-0 group-hover:opacity-100 transition-all">→</span>
-                        </div>
-                    </a>
-                    
-                    <a href="#" class="group flex flex-col md:flex-row md:items-center justify-between py-8 px-4 hover:bg-gray-50 transition-all rounded-2xl">
-                        <div class="flex items-center space-x-6">
-                            <span class="text-blue-600 font-bold text-[10px] border border-blue-200 px-2 py-0.5 rounded uppercase tracking-tighter">TAX</span>
-                            <h4 class="text-lg font-bold group-hover:text-blue-600 transition">수도권 과밀억제권역 외 법인 이전 취득세 100% 감면 요건</h4>
-                        </div>
-                        <div class="flex items-center space-x-4 mt-3 md:mt-0">
-                            <span class="text-gray-300 text-xs font-medium">2026.04.20</span>
-                            <span class="text-blue-600 opacity-0 group-hover:opacity-100 transition-all">→</span>
-                        </div>
-                    </a>
-
-                    <a href="#" class="group flex flex-col md:flex-row md:items-center justify-between py-8 px-4 hover:bg-gray-50 transition-all rounded-2xl">
-                        <div class="flex items-center space-x-6">
-                            <span class="text-blue-600 font-bold text-[10px] border border-blue-200 px-2 py-0.5 rounded uppercase tracking-tighter">ESTATE</span>
-                            <h4 class="text-lg font-bold group-hover:text-blue-600 transition">고덕신도시 BRT 개통에 따른 인근 지식산업센터 시세 전망</h4>
-                        </div>
-                        <div class="flex items-center space-x-4 mt-3 md:mt-0">
-                            <span class="text-gray-300 text-xs font-medium">2026.04.15</span>
-                            <span class="text-blue-600 opacity-0 group-hover:opacity-100 transition-all">→</span>
-                        </div>
-                    </a>
+                <div id="blog-list" class="divide-y divide-gray-100 min-h-[200px]">
+                    <div class="py-12 text-center text-gray-400 flex flex-col items-center justify-center">
+                        <i class="fa-solid fa-spinner fa-spin text-3xl mb-4 text-blue-600"></i>
+                        <p>최신 리포트를 불러오는 중입니다...</p>
+                    </div>
                 </div>
                 
                 <div class="mt-16 text-center">
-                    <button class="px-10 py-4 bg-gray-900 text-white text-sm font-bold rounded-full hover:bg-blue-600 transition shadow-xl">브리핑 리포트 더보기 +</button>
+                    <a href="https://blog.naver.com/kcwlove12" target="_blank" class="inline-block px-10 py-4 bg-gray-900 text-white text-sm font-bold rounded-full hover:bg-blue-600 transition shadow-xl">네이버 블로그 전체보기 +</a>
                 </div>
             </div>
         </div>
@@ -204,6 +177,57 @@
                 });
             }
         });
+    </script>
+
+    <script>
+        // 대표님의 네이버 블로그 ID 설정
+        const blogId = "kcwlove12"; 
+        const blogRss = `https://rss.blog.naver.com/${blogId}`;
+        const apiURL = `https://api.rss2json.com/v1/api.json?rss_url=${blogRss}`;
+
+        async function loadBlogPosts() {
+            const briefingList = document.getElementById('blog-list');
+            try {
+                const response = await fetch(apiURL);
+                const data = await response.json();
+
+                if (data.status === 'ok' && data.items.length > 0) {
+                    // 최신글 5개 추출 및 렌더링
+                    briefingList.innerHTML = data.items.slice(0, 5).map(post => {
+                        // 날짜 포맷 정리 (예: 2026-04-25 15:30:00 -> 2026.04.25)
+                        const dateStr = post.pubDate.split(' ')[0].replace(/-/g, '.');
+                        
+                        // 카테고리 태그 처리 (태그가 없으면 INSIGHT로 기본 노출)
+                        const category = (post.categories && post.categories.length > 0) ? post.categories[0] : 'INSIGHT';
+
+                        return `
+                        <a href="${post.link}" target="_blank" class="group flex flex-col md:flex-row md:items-center justify-between py-8 px-4 hover:bg-gray-50 transition-all rounded-2xl border-b border-gray-50 last:border-b-0">
+                            <div class="flex items-center space-x-6 w-full md:w-4/5">
+                                <span class="text-blue-600 font-bold text-[10px] border border-blue-200 px-2 py-0.5 rounded uppercase tracking-tighter shrink-0">${category}</span>
+                                <h4 class="text-lg font-bold group-hover:text-blue-600 transition truncate-text">${post.title}</h4>
+                            </div>
+                            <div class="flex items-center space-x-4 mt-4 md:mt-0 shrink-0">
+                                <span class="text-gray-400 text-xs font-medium">${dateStr}</span>
+                                <span class="text-blue-600 opacity-0 group-hover:opacity-100 transition-all transform group-hover:translate-x-1">→</span>
+                            </div>
+                        </a>
+                        `;
+                    }).join('');
+                } else {
+                    briefingList.innerHTML = `<div class="py-12 text-center text-gray-500">최신 게시글이 없습니다.</div>`;
+                }
+            } catch (error) {
+                console.error("블로그 데이터를 불러오는 중 오류 발생:", error);
+                briefingList.innerHTML = `
+                    <div class="py-12 text-center text-gray-500">
+                        <i class="fa-solid fa-triangle-exclamation text-2xl mb-2 text-gray-300"></i><br>
+                        데이터 연동 중 일시적인 오류가 발생했습니다.<br>잠시 후 다시 시도해주세요.
+                    </div>`;
+            }
+        }
+        
+        // 페이지 로딩 완료 시 블로그 데이터 호출
+        document.addEventListener('DOMContentLoaded', loadBlogPosts);
     </script>
 </body>
 </html>
