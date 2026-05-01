@@ -196,5 +196,18 @@
         document.getElementById('mobile-menu-btn').addEventListener('click', () => document.getElementById('mobile-menu').classList.remove('hidden'));
         document.getElementById('close-btn').addEventListener('click', () => document.getElementById('mobile-menu').classList.add('hidden'));
     </script>
+<!-- 하단 고정 플로팅 버튼 시작 -->
+<div class="fixed bottom-6 right-6 flex flex-col gap-3 z-[100]">
+    <!-- 카카오톡 1:1 채팅 문의 -->
+    <a href="https://open.kakao.com/me/ysdnc_vista" target="_blank" class="w-16 h-16 bg-[#FEE500] rounded-2xl shadow-xl flex items-center justify-center border-2 border-white active:scale-95 transition-all">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/KakaoTalk_logo.svg" class="w-10 h-10" alt="카톡문의">
+    </a>
+    
+    <!-- 전화 상담 문의 -->
+    <a href="tel:1688-4609" class="w-16 h-16 bg-[#800020] rounded-2xl shadow-xl flex items-center justify-center border-2 border-white active:scale-95 transition-all">
+        <span style="font-size: 2em;">📞</span>
+    </a>
+</div>
+<!-- 하단 고정 플로팅 버튼 끝 -->
 </body>
 </html>
