@@ -102,62 +102,61 @@
             </ul>
 
             <!-- 강한 강조 박스 -->
-            <div class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white p-10 rounded-2xl text-center">
-                <p class="text-xl md:text-2xl leading-tight font-medium">
-                    현재 신축한다면 평당 1,400만원 수준이지만,<br class="hidden md:block">
-                    <span class="text-3xl md:text-4xl font-black mt-3 block">
-                        본 현장은 최대 지원금 적용 시<br>평당 600만원대
-                    </span>
-                </p>
+<div class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white p-10 rounded-2xl text-center">
+    <p class="text-xl md:text-2xl leading-tight font-medium">
+        현재 신축한다면 평당 1,400만원 수준이지만,<br class="hidden md:block">
+        <span class="text-3xl md:text-4xl font-black mt-3 block">
+            본 현장은 최대 지원금 적용 시<br>평당 600만원대
+        </span>
+    </p>
+</div>
+
+<!-- 가격 비교 그래프 -->
+<div class="graph-section bg-white p-10 md:p-14 rounded-3xl shadow-sm border border-gray-100 mt-10">
+    <h3 class="text-3xl font-bold text-center mb-12 text-slate-900">
+        신축 건설 대비 가격 비교
+    </h3>
+    
+    <div class="space-y-10">
+        <!-- 신축 예상 -->
+        <div>
+            <div class="flex flex-col md:flex-row md:items-center gap-4">
+                <div class="md:w-36 md:text-right font-medium text-gray-500 text-lg">신축 예상</div>
+                <div class="flex-1">
+                    <div class="h-14 bg-gray-200 rounded-2xl relative overflow-hidden">
+                        <div class="bar h-full bg-gray-400 rounded-2xl transition-all duration-1000 ease-out" 
+                             style="width: 0%;" id="bar1"></div>
+                    </div>
+                </div>
+                <div class="md:w-36 md:text-right">
+                    <span class="text-2xl font-bold text-gray-700">1,400만원</span>
+                </div>
             </div>
         </div>
 
-        <!-- 가격 비교 그래프 -->
-        <div class="graph-section bg-white p-10 md:p-14 rounded-3xl shadow-sm border border-gray-100">
-            <h3 class="text-3xl font-bold text-center mb-12 text-slate-900">
-                신축 건설 대비 가격 비교
-            </h3>
-            
-            <div class="space-y-10">
-                <!-- 신축 예상 -->
-                <div>
-                    <div class="flex flex-col md:flex-row md:items-center gap-4">
-                        <div class="md:w-36 md:text-right font-medium text-gray-500 text-lg">신축 예상</div>
-                        <div class="flex-1">
-                            <div class="h-14 bg-gray-200 rounded-2xl relative overflow-hidden">
-                                <div class="bar h-full bg-gray-400 rounded-2xl" style="width: 0%;" id="bar1"></div>
-                            </div>
-                        </div>
-                        <div class="md:w-36 md:text-right">
-                            <span class="text-2xl font-bold text-gray-700">1,400만원</span>
-                        </div>
+        <!-- 본 현장 -->
+        <div>
+            <div class="flex flex-col md:flex-row md:items-center gap-4">
+                <div class="md:w-36 md:text-right font-bold text-blue-700 text-lg">본 현장</div>
+                <div class="flex-1">
+                    <div class="h-14 bg-blue-100 rounded-2xl relative overflow-hidden">
+                        <div class="bar h-full bg-blue-600 rounded-2xl transition-all duration-1000 ease-out" 
+                             style="width: 0%;" id="bar2"></div>
                     </div>
                 </div>
-
-                <!-- 본 현장 -->
-                <div>
-                    <div class="flex flex-col md:flex-row md:items-center gap-4">
-                        <div class="md:w-36 md:text-right font-bold text-blue-700 text-lg">본 현장</div>
-                        <div class="flex-1">
-                            <div class="h-14 bg-blue-100 rounded-2xl relative overflow-hidden">
-                                <div class="bar h-full bg-blue-600 rounded-2xl" style="width: 0%;" id="bar2"></div>
-                            </div>
-                        </div>
-                        <div class="md:w-36 md:text-right">
-                            <span class="text-3xl font-black text-blue-700">600만원대</span>
-                        </div>
-                    </div>
+                <div class="md:w-36 md:text-right">
+                    <span class="text-3xl font-black text-blue-700">600만원대</span>
                 </div>
-            </div>
-            
-            <div class="text-center mt-14">
-                <p class="inline-flex items-center gap-3 bg-red-50 text-red-600 px-8 py-4 rounded-2xl text-xl font-bold border border-red-100">
-                    🔥 약 57% 비용 절감
-                </p>
             </div>
         </div>
     </div>
-</section>
+    
+    <div class="text-center mt-14">
+        <p class="inline-flex items-center gap-3 bg-red-50 text-red-600 px-8 py-4 rounded-2xl text-xl font-bold border border-red-100">
+            🔥 약 57% 비용 절감
+        </p>
+    </div>
+</div>
 
     <!-- 5. 분양 현장 안내 -->
     <section class="py-24 bg-white px-6">
@@ -243,37 +242,44 @@
     <!-- 플로팅 버튼 세트 끝 -->
 
     <!-- 8. 자바스크립트 엔진 -->
-    <script>
-        // 모바일 메뉴
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuBtn = document.getElementById('mobile-menu-btn'); 
-            const closeBtn = document.getElementById('close-btn');       
-            const mobileMenu = document.getElementById('mobile-menu');   
+<script>
+    // 모바일 메뉴
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => mobileMenu.classList.remove('hidden'));
+        }
+        if (closeBtn && mobileMenu) {
+            closeBtn.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        }
+    });
 
-            if (menuBtn && mobileMenu) {
-                menuBtn.addEventListener('click', () => mobileMenu.classList.remove('hidden'));
-            }
-            if (closeBtn && mobileMenu) {
-                closeBtn.addEventListener('click', () => mobileMenu.classList.add('hidden'));
-            }
+    // 그래프 애니메이션 (개선 버전)
+    document.addEventListener("DOMContentLoaded", () => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // bar1, bar2가 존재하는지 안전하게 체크
+                    const bar1 = document.getElementById('bar1');
+                    const bar2 = document.getElementById('bar2');
+                    
+                    if (bar1) bar1.style.width = '88%';
+                    if (bar2) bar2.style.width = '43%';
+                }
+            });
+        }, { 
+            threshold: 0.4,     // 조금 더 일찍 애니메이션 시작
+            rootMargin: "0px 0px -50px 0px"
         });
 
-        // 그래프 애니메이션
-        document.addEventListener("DOMContentLoaded", () => {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        document.getElementById('bar1').style.width = '85%';
-                        document.getElementById('bar2').style.width = '42%';
-                    }
-                });
-            }, { threshold: 0.3 }); 
-
-            const graphSection = document.querySelector('.graph-section');
-            if(graphSection) {
-                observer.observe(graphSection);
-            }
-        });
-    </script>
+        const graphSection = document.querySelector('.graph-section');
+        if (graphSection) {
+            observer.observe(graphSection);
+        }
+    });
+</script>
 </body>
 </html>
