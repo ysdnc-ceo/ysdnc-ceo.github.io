@@ -3,130 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>현장 분석 리포트 | (주)윤성디앤씨</title>
+    <title>분양 현장 및 포트폴리오 | (주)윤성디앤씨</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        body { font-family: "Pretendard Variable", Pretendard, sans-serif; }
-        #mobile-menu { transition: transform 0.3s ease-in-out; }
-        #mobile-menu.hidden { transform: translateX(100%); display: none; }
-    </style>
     <link rel="icon" href="logo.png" type="image/png">
-    <link rel="apple-touch-icon" href="logo.png">
+    <style>
+        body { font-family: "Pretendard Variable", Pretendard, sans-serif; scroll-behavior: smooth; }
+        .gradient-header { background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); }
+        /* 그래프 애니메이션 효과 */
+        .bar { transition: width 1.5s ease-out; }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-900 overflow-x-hidden">
+<body class="bg-gray-50 text-gray-900 relative">
 
+    <!-- 1. 공통 네비게이션 바 (유지) -->
     <nav class="bg-white shadow-sm sticky top-0 z-[100] border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-3">
                 <img src="logo.png" alt="로고" class="h-10 w-auto"> 
                 <span class="text-xl font-bold tracking-tight text-slate-800">(주)윤성디앤씨</span>
             </a>
-
             <ul class="hidden md:flex gap-8 font-semibold text-gray-700 text-sm items-center">
-                <li><a href="index.html" class="text-blue-600">홈</a></li>
+                <li><a href="index.html" class="hover:text-blue-600 transition">홈</a></li>
                 <li><a href="service.html" class="hover:text-blue-600 transition">서비스</a></li>
-                <li><a href="portfolio.html" class="hover:text-blue-600 transition">분양현장</a></li>
                 <li><a href="insight.html" class="hover:text-blue-600 transition">마켓 인사이트</a></li>
+                <li><a href="portfolio.html" class="text-blue-600 transition">현장정보</a></li>
                 <li><a href="report.html" class="bg-slate-900 text-white px-5 py-2.5 rounded-lg text-sm hover:bg-blue-700 transition">리포트 신청</a></li>
             </ul>
-
-            <button id="menu-btn" class="md:hidden text-2xl text-slate-800 focus:outline-none">
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-slate-800 focus:outline-none">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
-
+        
         <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-white shadow-2xl z-[110] hidden p-8">
             <div class="flex justify-end mb-8">
                 <button id="close-btn" class="text-2xl text-slate-800"><i class="fa-solid fa-xmark"></i></button>
             </div>
-            <ul class="flex flex-col gap-6 font-semibold text-gray-700 text-lg">
-                <li><a href="index.html" class="text-blue-600">홈</a></li>
-                <li><a href="service.html">서비스</a></li>
-                <li><a href="portfolio.html">분양현장</a></li>
-                <li><a href="insight.html" class="hover:text-blue-600 transition">마켓 인사이트</a>
-                <li><a href="report.html" class="inline-block bg-slate-900 text-white px-4 py-2 rounded-lg text-center">리포트 신청</a></li>
-            </ul>
+            <a href="index.html" class="block text-lg font-bold mb-6 hover:text-blue-600 transition">홈</a>
+            <a href="service.html" class="block text-lg font-bold mb-6 hover:text-blue-600 transition">서비스</a>
+            <a href="insight.html" class="block text-lg font-bold mb-6 hover:text-blue-600 transition">마켓 인사이트</a>
+            <a href="portfolio.html" class="block text-lg font-bold text-blue-600 mb-6 transition">현장정보</a>
+            <a href="report.html" class="block text-lg font-bold mb-6 hover:text-blue-600 transition">리포트 신청</a>
         </div>
     </nav>
 
-    <header class="bg-slate-900 py-20 px-6 text-center">
-        <h1 class="text-3xl md:text-4xl font-extrabold text-white mb-4 tracking-tight text-nowrap">현장 분석 리포트</h1>
-        <p class="text-blue-300 font-medium max-w-2xl mx-auto italic">"삼성 P5 가동 대비 핵심 입지 분석, 발로 뛴 정보만 담았습니다."</p>
+    <!-- 2. 메인 문구 (Hero Section) -->
+    <header class="gradient-header py-28 text-white text-center px-6">
+        <div class="container mx-auto max-w-4xl">
+            <h1 class="text-4xl md:text-5xl font-black mb-6 leading-tight tracking-tight">
+                이미 완공된 평택 사옥형 지식산업센터,<br>
+                <span class="text-blue-400">즉시 입주 가능</span>
+            </h1>
+            <p class="text-lg md:text-xl text-blue-100 leading-relaxed font-light">
+                삼성전자 협력사와 국내 대형 기업들이 선택한 검증된 공간
+            </p>
+        </div>
     </header>
 
-    <main class="max-w-6xl mx-auto py-20 px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
-        
-        <a href="itower.html" class="group block bg-white rounded-[2.5rem] shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-            <div class="h-64 md:h-72 w-full overflow-hidden bg-gray-200 relative">
-                <img src="itower1.png" alt="I-TOWER" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                <div class="absolute top-5 left-5 bg-blue-600 text-white px-4 py-1.5 rounded-full text-xs font-bold shadow-lg">삼성 초밀착형</div>
+    <!-- 3. 입주 기업 섹션 -->
+    <section class="py-24 bg-white px-6 border-b border-gray-100">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">국내 주요 기업이 선택한 공간</h2>
+            <p class="text-lg text-gray-600 mb-16 leading-relaxed max-w-3xl mx-auto">
+                삼성전자 협력사를 비롯한 국내 대형 기업들이 입주한 실사용 공간입니다.<br class="hidden md:block">
+                입주 기업들의 선택을 통해 검증된 현장임을 확인할 수 있습니다.
+            </p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- 추후 실제 로고 이미지(<img src="...">)로 변경하실 수 있습니다. -->
+                <div class="h-24 bg-gray-50 border border-gray-200 rounded-xl flex items-center justify-center text-gray-400 font-bold shadow-sm">협력사 로고 1</div>
+                <div class="h-24 bg-gray-50 border border-gray-200 rounded-xl flex items-center justify-center text-gray-400 font-bold shadow-sm">협력사 로고 2</div>
+                <div class="h-24 bg-gray-50 border border-gray-200 rounded-xl flex items-center justify-center text-gray-400 font-bold shadow-sm">협력사 로고 3</div>
+                <div class="h-24 bg-gray-50 border border-gray-200 rounded-xl flex items-center justify-center text-gray-400 font-bold shadow-sm">협력사 로고 4</div>
             </div>
-            <div class="p-10">
-                <h2 class="text-2xl font-black mb-4 tracking-tight text-slate-800 group-hover:text-blue-600 transition-colors">고덕 지식공작소 I-TOWER</h2>
-                <p class="text-gray-600 mb-10 text-sm leading-relaxed italic">"삼성전자 P5 정문 2km, 도면 너머의 숨겨진 가치를 분석한 단독 리포트"</p>
-                <div class="w-full bg-gray-100 text-slate-500 text-center py-4 rounded-2xl font-bold group-hover:bg-blue-600 group-hover:text-white transition-all shadow-sm">
-                    상세보기 <i class="fa-solid fa-arrow-right ml-2"></i>
+        </div>
+    </section>
+
+    <!-- 4. 분양 조건 & 57% 절감 그래프 섹션 -->
+    <section class="py-24 bg-gray-50 px-6 border-b border-gray-200">
+        <div class="max-w-4xl mx-auto">
+            
+            <div class="bg-white p-10 md:p-14 rounded-3xl shadow-sm border border-gray-100 mb-16">
+                <h3 class="text-2xl font-bold text-slate-900 mb-8 border-b pb-4">특별 분양 조건</h3>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-center text-lg text-gray-700 font-medium">
+                        <i class="fa-solid fa-circle-check text-blue-600 mr-4 text-xl"></i> 즉시 입주 가능
+                    </li>
+                    <li class="flex items-center text-lg text-gray-700 font-medium">
+                        <i class="fa-solid fa-circle-check text-blue-600 mr-4 text-xl"></i> 평당 700만원대 <span class="text-sm text-gray-400 ml-2 font-normal">(22년 당시 분양가)</span>
+                    </li>
+                    <li class="flex items-center text-lg text-gray-700 font-medium">
+                        <i class="fa-solid fa-circle-check text-blue-600 mr-4 text-xl"></i> 추가 분양지원금 제공 중
+                    </li>
+                </ul>
+                <div class="bg-blue-50 p-6 rounded-xl border border-blue-100 text-center">
+                    <p class="text-gray-700 leading-relaxed text-lg font-medium">
+                        현재 신축 지식산업센터를 짓는다면 평당 1,400만원 수준이지만,<br class="hidden md:block">
+                        <strong class="text-blue-700 text-xl">본 현장을 통해 평당 600만원대에 사옥 마련</strong> 하실 수 있습니다.
+                    </p>
                 </div>
             </div>
-        </a>
 
-        <a href="wtower.html" class="group block bg-white rounded-[2.5rem] shadow-xl overflow-hidden border-t-8 border-t-orange-500 border-x border-b border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 text-nowrap">
-            <div class="h-64 md:h-72 w-full overflow-hidden bg-gray-200 relative">
-                <img src="wtower2.png" alt="W-TOWER" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                <div class="absolute top-5 left-5 bg-orange-600 text-white px-4 py-1.5 rounded-full text-xs font-bold shadow-lg">초대형 물류 특화</div>
-            </div>
-            <div class="p-10">
-                <h2 class="text-2xl font-black mb-4 tracking-tight text-slate-800 group-hover:text-orange-600 transition-colors">고덕 2차 W-TOWER</h2>
-                <p class="text-gray-600 mb-10 text-sm leading-relaxed italic text-nowrap">"13,800평 압도적 스케일, 지상 5층 도어투도어 시스템 분석 리포트"</p>
-                <div class="w-full bg-gray-100 text-slate-500 text-center py-4 rounded-2xl font-bold group-hover:bg-orange-600 group-hover:text-white transition-all shadow-sm">
-                    상세보기 <i class="fa-solid fa-arrow-right ml-2"></i>
+            <!-- 스크롤 감지 그래프 -->
+            <div class="graph-section bg-white p-10 md:p-14 rounded-3xl shadow-sm border border-gray-100">
+                <h3 class="text-3xl font-bold text-center mb-12 text-slate-900">신축 vs 본 현장 가격 비교</h3>
+                
+                <div class="space-y-10">
+                    <div>
+                        <div class="flex flex-col md:flex-row md:items-center gap-4">
+                            <div class="md:w-32 md:text-right font-medium text-gray-500 text-lg">신축 예상</div>
+                            <div class="flex-1 w-full">
+                                <div class="h-12 md:h-14 bg-gray-200 rounded-xl relative overflow-hidden shadow-inner">
+                                    <div class="bar h-full bg-gray-400 rounded-xl" style="width: 0%;" id="bar1"></div>
+                                </div>
+                            </div>
+                            <div class="md:w-32 md:text-right">
+                                <span class="text-2xl font-bold text-gray-700">1,400만원</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex flex-col md:flex-row md:items-center gap-4">
+                            <div class="md:w-32 md:text-right font-bold text-blue-700 text-lg">본 현장</div>
+                            <div class="flex-1 w-full">
+                                <div class="h-12 md:h-14 bg-blue-100 rounded-xl relative overflow-hidden shadow-inner">
+                                    <div class="bar h-full bg-blue-600 rounded-xl" style="width: 0%;" id="bar2"></div>
+                                </div>
+                            </div>
+                            <div class="md:w-32 md:text-right">
+                                <span class="text-3xl font-black text-blue-700">600만원대</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <p class="inline-block bg-red-50 text-red-600 px-8 py-4 rounded-full text-xl font-bold border border-red-100 shadow-sm">
+                        🔥 약 57% 비용 절감
+                    </p>
                 </div>
             </div>
-        </a>
+        </div>
+    </section>
 
-    </main>
+    <!-- 5. 분양 현장 배치 (아이타워 / 더블유타워) -->
+    <section class="py-24 bg-white px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-16">분양 현장 안내</h2>
+            
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="bg-gray-50 rounded-3xl border border-gray-200 overflow-hidden group hover:shadow-lg transition-shadow">
+                    <div class="h-64 bg-slate-200 flex items-center justify-center relative overflow-hidden">
+                        <i class="fa-regular fa-image text-5xl text-slate-400 group-hover:scale-110 transition-transform duration-500"></i>
+                    </div>
+                    <div class="p-10">
+                        <h3 class="text-2xl font-black text-slate-900 mb-3">아이타워 (i-Tower)</h3>
+                        <p class="text-gray-600 mb-8 leading-relaxed">쾌적한 업무 환경을 제공하는 프리미엄 섹션 오피스로, 연구 및 IT 기업에 최적화된 공간입니다.</p>
+                        <a href="#none" class="text-blue-600 font-bold hover:text-blue-800 transition inline-flex items-center gap-2">
+                            상세 정보 확인하기 <i class="fa-solid fa-arrow-right text-sm"></i>
+                        </a>
+                    </div>
+                </div>
 
-    <footer class="bg-slate-900 text-gray-400 py-16 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 pt-12">
-            <div class="text-center md:text-left">
-                <p class="mb-2 text-sm">주소: 경기도 평택시 고덕면 도시지원1길 49, W-tower 107호</p>
-                <p class="mb-2 text-sm">대표번호: 1577-8664</p>
-                <p class="mb-2 text-sm">이메일: ysdnc.ceo@gmail.com</p>
+                <div class="bg-gray-50 rounded-3xl border border-gray-200 overflow-hidden group hover:shadow-lg transition-shadow">
+                    <div class="h-64 bg-slate-200 flex items-center justify-center relative overflow-hidden">
+                        <i class="fa-regular fa-image text-5xl text-slate-400 group-hover:scale-110 transition-transform duration-500"></i>
+                    </div>
+                    <div class="p-10">
+                        <h3 class="text-2xl font-black text-slate-900 mb-3">더블유타워 (W-Tower)</h3>
+                        <p class="text-gray-600 mb-8 leading-relaxed">제조업 및 물류 이동에 특화된 드라이브인(Drive-in) 도어투도어 시스템을 완벽하게 갖추었습니다.</p>
+                        <a href="#none" class="text-blue-600 font-bold hover:text-blue-800 transition inline-flex items-center gap-2">
+                            상세 정보 확인하기 <i class="fa-solid fa-arrow-right text-sm"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- 6. 공통 푸터 (유지) -->
+    <footer class="bg-gray-100 py-12 px-6 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-6">
+            <div>
+                <h4 class="text-slate-900 text-xl font-black mb-2">(주)윤성디앤씨</h4>
+                <p class="text-gray-500 text-sm leading-loose">
+                    대표이사: 강채원 | 경기도 평택시 고덕면 도시지원1길 49, W-tower 1층 입주센터<br>
+                    문의전화: 1577-8664 | 이메일: ysdnc.ceo@gmail.com
+                </p>
+            </div>
+            <div class="text-gray-400 text-xs">
+                © 2026 YS D&C. All Rights Reserved.
+            </div>
+        </div>
     </footer>
 
-    <div class="fixed bottom-8 right-8 z-[9999] flex flex-col gap-3">
-    <!-- 전화 상담 (파란색 & 1577-8664 적용) -->
-    <a href="tel:1577-8664" 
-       onclick="if(typeof gtag === 'function') { gtag('event', 'conversion', {'send_to': 'AW-18024921490/9IQqCNfs9J4cEJLz-ZJD'}); }"
-       class="hover:scale-110 transition-transform group relative">
-        <div class="bg-blue-600 w-14 h-14 rounded-2xl flex items-center justify-center shadow-2xl border border-blue-500 text-white">
-            <span style="font-size: 1.5em;">📞</span>
-        </div>
-        <span class="absolute right-16 top-1/2 -translate-y-1/2 bg-blue-600 text-white text-xs font-bold px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity text-nowrap pointer-events-none shadow-md">
-            전화 상담
-        </span>
+    <!-- ⭐ 7. 공통 플로팅 버튼 (유지) ⭐ -->
+    <a href="report.html" class="fixed bottom-8 right-8 z-[9999] bg-slate-900 text-white font-bold px-6 py-4 rounded-full shadow-2xl hover:scale-105 transition-transform flex items-center gap-2 border border-slate-700">
+        <i class="fa-solid fa-file-pdf text-red-400"></i> 리포트 신청
     </a>
 
-    <!-- 카톡 상담 (기존 유지) -->
-    <a href="https://open.kakao.com/me/ysdnc_ceo" target="_blank" class="hover:scale-110 transition-transform group relative">
-        <div class="bg-[#FEE500] w-14 h-14 rounded-2xl flex items-center justify-center shadow-2xl">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/KakaoTalk_logo.svg" class="w-8 h-8" alt="카톡상담">
-        </div>
-        <span class="absolute right-16 top-1/2 -translate-y-1/2 bg-[#FEE500] text-slate-900 text-xs font-bold px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity text-nowrap pointer-events-none shadow-md">
-            카톡 상담
-        </span>
-    </a>
-</div>
-
+    <!-- 8. 자바스크립트 엔진 -->
     <script>
-        const menuBtn = document.getElementById('menu-btn');
-        const closeBtn = document.getElementById('close-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        menuBtn.addEventListener('click', () => { mobileMenu.classList.remove('hidden'); });
-        closeBtn.addEventListener('click', () => { mobileMenu.classList.add('hidden'); });
+        // 모바일 메뉴 컨트롤 (공통)
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.getElementById('mobile-menu-btn'); 
+            const closeBtn = document.getElementById('close-btn');       
+            const mobileMenu = document.getElementById('mobile-menu');   
+
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => mobileMenu.classList.remove('hidden'));
+            }
+            if (closeBtn && mobileMenu) {
+                closeBtn.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+            }
+        });
+
+        // 그래프 애니메이션 엔진
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        document.getElementById('bar1').style.width = '85%';
+                        document.getElementById('bar2').style.width = '42%';
+                    }
+                });
+            }, { threshold: 0.3 }); 
+
+            const graphSection = document.querySelector('.graph-section');
+            if(graphSection) {
+                observer.observe(graphSection);
+            }
+        });
     </script>
 </body>
 </html>
