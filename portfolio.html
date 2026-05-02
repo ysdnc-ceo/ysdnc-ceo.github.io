@@ -11,13 +11,12 @@
     <style>
         body { font-family: "Pretendard Variable", Pretendard, sans-serif; scroll-behavior: smooth; }
         .gradient-header { background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); }
-        /* 그래프 애니메이션 효과 */
         .bar { transition: width 1.5s ease-out; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900 relative">
 
-    <!-- 1. 공통 네비게이션 바 (유지) -->
+    <!-- 1. 공통 네비게이션 바 -->
     <nav class="bg-white shadow-sm sticky top-0 z-[100] border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-3">
@@ -27,7 +26,7 @@
             <ul class="hidden md:flex gap-8 font-semibold text-gray-700 text-sm items-center">
                 <li><a href="index.html" class="hover:text-blue-600 transition">홈</a></li>
                 <li><a href="service.html" class="hover:text-blue-600 transition">서비스</a></li>
-                <li><a href="portfolio.html" class="text-blue-600 transition">분양현장</a></li>
+                <li><a href="portfolio.html" class="text-blue-600 transition">현장정보</a></li>
                 <li><a href="insight.html" class="hover:text-blue-600 transition">마켓 인사이트</a></li>
                 <li><a href="report.html" class="bg-slate-900 text-white px-5 py-2.5 rounded-lg text-sm hover:bg-blue-700 transition">리포트 신청</a></li>
             </ul>
@@ -42,7 +41,7 @@
             </div>
             <a href="index.html" class="block text-lg font-bold mb-6 hover:text-blue-600 transition">홈</a>
             <a href="service.html" class="block text-lg font-bold mb-6 hover:text-blue-600 transition">서비스</a>
-            <a href="portfolio.html" class="block text-lg font-bold text-blue-600 mb-6 transition">분양현장</a>
+            <a href="portfolio.html" class="block text-lg font-bold text-blue-600 mb-6 transition">현장정보</a>
             <a href="insight.html" class="block text-lg font-bold mb-6 hover:text-blue-600 transition">마켓 인사이트</a>
             <a href="report.html" class="block text-lg font-bold mb-6 hover:text-blue-600 transition">리포트 신청</a>
         </div>
@@ -71,7 +70,6 @@
             </p>
             
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <!-- 추후 실제 로고 이미지(<img src="...">)로 변경하실 수 있습니다. -->
                 <div class="h-24 bg-gray-50 border border-gray-200 rounded-xl flex items-center justify-center text-gray-400 font-bold shadow-sm">협력사 로고 1</div>
                 <div class="h-24 bg-gray-50 border border-gray-200 rounded-xl flex items-center justify-center text-gray-400 font-bold shadow-sm">협력사 로고 2</div>
                 <div class="h-24 bg-gray-50 border border-gray-200 rounded-xl flex items-center justify-center text-gray-400 font-bold shadow-sm">협력사 로고 3</div>
@@ -80,7 +78,7 @@
         </div>
     </section>
 
-    <!-- 4. 분양 조건 & 57% 절감 그래프 섹션 -->
+    <!-- 4. 분양 조건 & 그래프 섹션 -->
     <section class="py-24 bg-gray-50 px-6 border-b border-gray-200">
         <div class="max-w-4xl mx-auto">
             
@@ -105,7 +103,6 @@
                 </div>
             </div>
 
-            <!-- 스크롤 감지 그래프 -->
             <div class="graph-section bg-white p-10 md:p-14 rounded-3xl shadow-sm border border-gray-100">
                 <h3 class="text-3xl font-bold text-center mb-12 text-slate-900">신축 vs 본 현장 가격 비교</h3>
                 
@@ -148,33 +145,41 @@
         </div>
     </section>
 
-    <!-- 5. 분양 현장 배치 (아이타워 / 더블유타워) -->
+    <!-- ⭐ 5. 분양 현장 안내 (링크 수정됨) ⭐ -->
     <section class="py-24 bg-white px-6">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-16">분양 현장 안내</h2>
             
             <div class="grid md:grid-cols-2 gap-10">
+                <!-- 아이타워 카드 -->
                 <div class="bg-gray-50 rounded-3xl border border-gray-200 overflow-hidden group hover:shadow-lg transition-shadow">
                     <div class="h-64 bg-slate-200 flex items-center justify-center relative overflow-hidden">
-                        <i class="fa-regular fa-image text-5xl text-slate-400 group-hover:scale-110 transition-transform duration-500"></i>
-                    </div>
+    <!-- src 속성에 대표님이 깃허브에 올리신 사진 파일 이름을 정확히 적어주세요! -->
+    <img src="itower.png" alt="아이타워 전경" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+</div>
                     <div class="p-10">
                         <h3 class="text-2xl font-black text-slate-900 mb-3">아이타워 (i-Tower)</h3>
                         <p class="text-gray-600 mb-8 leading-relaxed">쾌적한 업무 환경을 제공하는 프리미엄 섹션 오피스로, 연구 및 IT 기업에 최적화된 공간입니다.</p>
-                        <a href="#none" class="text-blue-600 font-bold hover:text-blue-800 transition inline-flex items-center gap-2">
+                        
+                        <!-- 👉 이곳의 href 값이 'itower.html'로 수정되었습니다! -->
+                        <a href="itower.html" class="text-blue-600 font-bold hover:text-blue-800 transition inline-flex items-center gap-2">
                             상세 정보 확인하기 <i class="fa-solid fa-arrow-right text-sm"></i>
                         </a>
                     </div>
                 </div>
 
+                <!-- 더블유타워 카드 -->
                 <div class="bg-gray-50 rounded-3xl border border-gray-200 overflow-hidden group hover:shadow-lg transition-shadow">
                     <div class="h-64 bg-slate-200 flex items-center justify-center relative overflow-hidden">
-                        <i class="fa-regular fa-image text-5xl text-slate-400 group-hover:scale-110 transition-transform duration-500"></i>
-                    </div>
+    <!-- src 속성에 대표님이 깃허브에 올리신 사진 파일 이름을 정확히 적어주세요! -->
+    <img src="wtower.png" alt="아이타워 전경" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+</div>
                     <div class="p-10">
                         <h3 class="text-2xl font-black text-slate-900 mb-3">더블유타워 (W-Tower)</h3>
                         <p class="text-gray-600 mb-8 leading-relaxed">제조업 및 물류 이동에 특화된 드라이브인(Drive-in) 도어투도어 시스템을 완벽하게 갖추었습니다.</p>
-                        <a href="#none" class="text-blue-600 font-bold hover:text-blue-800 transition inline-flex items-center gap-2">
+                        
+                        <!-- 👉 이곳의 href 값이 'wtower.html'로 수정되었습니다! -->
+                        <a href="wtower.html" class="text-blue-600 font-bold hover:text-blue-800 transition inline-flex items-center gap-2">
                             상세 정보 확인하기 <i class="fa-solid fa-arrow-right text-sm"></i>
                         </a>
                     </div>
@@ -183,7 +188,7 @@
         </div>
     </section>
 
-    <!-- 6. 공통 푸터 (유지) -->
+    <!-- 6. 공통 푸터 -->
     <footer class="bg-gray-100 py-12 px-6 border-t border-gray-200">
         <div class="max-w-7xl mx-auto text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-6">
             <div>
@@ -199,35 +204,14 @@
         </div>
     </footer>
 
-       <!-- 플로팅 버튼 세트 시작 -->
-    <div class="fixed bottom-8 right-8 z-[9999] flex flex-col gap-3">
-        <!-- 전화 상담 (파란색 & 1577-8664) -->
-        <a href="tel:1577-8664" 
-           onclick="if(typeof gtag === 'function') { gtag('event', 'conversion', {'send_to': 'AW-18024921490/9IQqCNfs9J4cEJLz-ZJD'}); }"
-           class="hover:scale-110 transition-transform group relative">
-            <div class="bg-blue-600 w-14 h-14 rounded-2xl flex items-center justify-center shadow-2xl border border-blue-500">
-                <span style="font-size: 1.5em; color: white;">📞</span>
-            </div>
-            <span class="absolute right-16 top-1/2 -translate-y-1/2 bg-blue-600 text-white text-xs font-bold px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity text-nowrap pointer-events-none shadow-md">
-                전화 상담
-            </span>
-        </a>
-
-        <!-- 카톡 상담 -->
-        <a href="https://open.kakao.com/me/ysdnc_ceo" target="_blank" class="hover:scale-110 transition-transform group relative">
-            <div class="bg-[#FEE500] w-14 h-14 rounded-2xl flex items-center justify-center shadow-2xl">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/KakaoTalk_logo.svg" class="w-8 h-8" alt="카톡상담">
-            </div>
-            <span class="absolute right-16 top-1/2 -translate-y-1/2 bg-[#FEE500] text-slate-900 text-xs font-bold px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity text-nowrap pointer-events-none shadow-md">
-                카톡 상담
-            </span>
-        </a>
-    </div>
-    <!-- 플로팅 버튼 세트 끝 -->
+    <!-- 7. 공통 플로팅 버튼 -->
+    <a href="report.html" class="fixed bottom-8 right-8 z-[9999] bg-slate-900 text-white font-bold px-6 py-4 rounded-full shadow-2xl hover:scale-105 transition-transform flex items-center gap-2 border border-slate-700">
+        <i class="fa-solid fa-file-pdf text-red-400"></i> 리포트 신청
+    </a>
 
     <!-- 8. 자바스크립트 엔진 -->
     <script>
-        // 모바일 메뉴 컨트롤 (공통)
+        // 모바일 메뉴
         document.addEventListener('DOMContentLoaded', function() {
             const menuBtn = document.getElementById('mobile-menu-btn'); 
             const closeBtn = document.getElementById('close-btn');       
@@ -241,7 +225,7 @@
             }
         });
 
-        // 그래프 애니메이션 엔진
+        // 그래프 애니메이션
         document.addEventListener("DOMContentLoaded", () => {
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
