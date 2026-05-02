@@ -27,8 +27,8 @@
             <ul class="hidden md:flex gap-8 font-semibold text-gray-700 text-sm items-center">
                 <li><a href="index.html" class="hover:text-blue-600 transition">홈</a></li>
                 <li><a href="service.html" class="hover:text-blue-600 transition">서비스</a></li>
+                <li><a href="portfolio.html" class="text-blue-600 transition">분양현장</a></li>
                 <li><a href="insight.html" class="hover:text-blue-600 transition">마켓 인사이트</a></li>
-                <li><a href="portfolio.html" class="text-blue-600 transition">현장정보</a></li>
                 <li><a href="report.html" class="bg-slate-900 text-white px-5 py-2.5 rounded-lg text-sm hover:bg-blue-700 transition">리포트 신청</a></li>
             </ul>
             <button id="mobile-menu-btn" class="md:hidden text-2xl text-slate-800 focus:outline-none">
@@ -42,8 +42,8 @@
             </div>
             <a href="index.html" class="block text-lg font-bold mb-6 hover:text-blue-600 transition">홈</a>
             <a href="service.html" class="block text-lg font-bold mb-6 hover:text-blue-600 transition">서비스</a>
+            <a href="portfolio.html" class="block text-lg font-bold text-blue-600 mb-6 transition">분양현장</a>
             <a href="insight.html" class="block text-lg font-bold mb-6 hover:text-blue-600 transition">마켓 인사이트</a>
-            <a href="portfolio.html" class="block text-lg font-bold text-blue-600 mb-6 transition">현장정보</a>
             <a href="report.html" class="block text-lg font-bold mb-6 hover:text-blue-600 transition">리포트 신청</a>
         </div>
     </nav>
@@ -199,10 +199,31 @@
         </div>
     </footer>
 
-    <!-- ⭐ 7. 공통 플로팅 버튼 (유지) ⭐ -->
-    <a href="report.html" class="fixed bottom-8 right-8 z-[9999] bg-slate-900 text-white font-bold px-6 py-4 rounded-full shadow-2xl hover:scale-105 transition-transform flex items-center gap-2 border border-slate-700">
-        <i class="fa-solid fa-file-pdf text-red-400"></i> 리포트 신청
-    </a>
+       <!-- 플로팅 버튼 세트 시작 -->
+    <div class="fixed bottom-8 right-8 z-[9999] flex flex-col gap-3">
+        <!-- 전화 상담 (파란색 & 1577-8664) -->
+        <a href="tel:1577-8664" 
+           onclick="if(typeof gtag === 'function') { gtag('event', 'conversion', {'send_to': 'AW-18024921490/9IQqCNfs9J4cEJLz-ZJD'}); }"
+           class="hover:scale-110 transition-transform group relative">
+            <div class="bg-blue-600 w-14 h-14 rounded-2xl flex items-center justify-center shadow-2xl border border-blue-500">
+                <span style="font-size: 1.5em; color: white;">📞</span>
+            </div>
+            <span class="absolute right-16 top-1/2 -translate-y-1/2 bg-blue-600 text-white text-xs font-bold px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity text-nowrap pointer-events-none shadow-md">
+                전화 상담
+            </span>
+        </a>
+
+        <!-- 카톡 상담 -->
+        <a href="https://open.kakao.com/me/ysdnc_ceo" target="_blank" class="hover:scale-110 transition-transform group relative">
+            <div class="bg-[#FEE500] w-14 h-14 rounded-2xl flex items-center justify-center shadow-2xl">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/KakaoTalk_logo.svg" class="w-8 h-8" alt="카톡상담">
+            </div>
+            <span class="absolute right-16 top-1/2 -translate-y-1/2 bg-[#FEE500] text-slate-900 text-xs font-bold px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity text-nowrap pointer-events-none shadow-md">
+                카톡 상담
+            </span>
+        </a>
+    </div>
+    <!-- 플로팅 버튼 세트 끝 -->
 
     <!-- 8. 자바스크립트 엔진 -->
     <script>
