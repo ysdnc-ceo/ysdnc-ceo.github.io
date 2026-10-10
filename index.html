@@ -35,52 +35,124 @@
 </header>
 
 <main>
-<section class="hero" style="background-image:url('assets/img/wtower2.jpg')">
+<style>
+.pt-hero{background:var(--soft);border-bottom:1px solid #fde2e3}
+.pt-hero .inner{max-width:1080px;margin:0 auto;padding:56px 16px 44px}
+.pt-hero .eyebrow{color:var(--accent);font-weight:700;font-size:15px;letter-spacing:.5px;margin:0 0 8px}
+.pt-hero h1{font-size:38px;line-height:1.3;margin:0 0 14px;letter-spacing:-.6px}
+.pt-hero p{font-size:16.5px;color:var(--sub);margin:0 0 4px;max-width:720px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:28px 0 0}
+.stat{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 18px 16px}
+.stat b{display:block;font-size:30px;font-weight:800;color:var(--accent);line-height:1.2}
+.stat span{font-size:14px;color:var(--sub)}
+.areas{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.area{border:1px solid var(--line);border-radius:10px;padding:16px 18px;background:#fff}
+.area b{display:block;font-size:17px;margin:0 0 4px}
+.area .num{font-size:15px;color:var(--sub)}
+.bar{height:8px;background:#f1f1f1;border-radius:999px;margin:10px 0 0;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--accent);border-radius:999px}
+.note{font-size:13.5px;color:var(--muted);margin:10px 0 0}
+.zone{border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:10px;padding:20px 22px;background:#fff;flex:1 1 400px}
+.zone h4{font-size:19px;margin:0 0 10px}
+.zone .tags{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px}
+.zone .tags span{font-size:13.5px;background:var(--soft);color:var(--ink);border-radius:999px;padding:4px 12px}
+.zone p{margin:0 0 6px;font-size:15px;color:var(--sub)}
+.zone strong{color:var(--accent)}
+.site-card{flex:1 1 300px;display:block;border:1px solid var(--line);border-radius:10px;padding:18px 20px;background:#fff;text-decoration:none;color:inherit}
+.site-card:hover{border-color:var(--accent)}
+.site-card b{display:block;font-size:17px;margin:0 0 6px}
+.site-card p{margin:0;font-size:14.5px;color:var(--sub)}
+.guide{width:100%;border-collapse:collapse;font-size:15px;min-width:560px}
+.guide th,.guide td{border-bottom:1px solid var(--line);padding:14px 12px;text-align:left;vertical-align:top}
+.guide th{width:160px;white-space:nowrap;color:var(--accent);font-weight:700;background:#fffafa}
+.guide td{color:var(--sub)}
+.guide tr:first-child th,.guide tr:first-child td{border-top:2px solid var(--ink)}
+.cta{margin-top:46px;background:var(--accent);border-radius:12px;padding:22px}
+.cta p{margin:0 0 6px;font-size:15px;color:#fff;opacity:.92}
+.cta .tel{display:inline-block;color:#fff;font-size:30px;font-weight:800;text-decoration:none;margin-right:14px}
+.cta .go{display:inline-block;background:#fff;color:var(--accent);font-size:15px;font-weight:700;text-decoration:none;padding:9px 16px;border-radius:999px;vertical-align:middle}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips a{display:inline-block;border:1px solid var(--accent);color:var(--accent);font-size:14px;text-decoration:none;padding:7px 14px;border-radius:999px}
+@media (max-width:820px){.stats,.areas{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){.pt-hero h1{font-size:28px}.stat b{font-size:25px}}
+</style>
+
+<section class="pt-hero">
 <div class="inner">
-<p class="eyebrow">평택 사옥형 지식산업센터</p>
-<h1>준비된 기업을 위한<br><em>현명한 선택</em></h1>
-<p class="lead">평택 지식산업센터 22곳을 직접 확인하고, 기업에 맞는 호실을 함께 찾습니다.</p>
-<div class="btns"><a class="btn btn-primary" href="portfolio.html">현장정보 보기</a><a class="btn btn-ghost" href="report.html">상담 문의</a></div>
+<p class="eyebrow">평택 지식산업센터 한눈에 보기</p>
+<h1>평택 지식산업센터, 어디에 몇 곳 있을까</h1>
+<p>평택에서 준공돼 운영 중인 지식산업센터는 22곳입니다.</p>
+<p>고덕국제신도시와 지제역 주변 두 권역에 대부분이 모여 있고, 권역마다 땅의 성격과 호실 구성이 다릅니다.</p>
+<p>사옥이나 작업장을 찾는 기업이 먼저 알아 두면 좋은 권역별 특징을 정리했습니다.</p>
+<div class="stats">
+<div class="stat"><b>22곳</b><span>준공·운영 중 지식산업센터</span></div>
+<div class="stat"><b>135만㎡</b><span>연면적 합계 (약)</span></div>
+<div class="stat"><b>13곳</b><span>고덕국제신도시</span></div>
+<div class="stat"><b>5곳</b><span>지제역 주변</span></div>
 </div>
-</section><div style="max-width:1080px;margin:0 auto;padding:48px 16px 24px;color:#222222;font-family:'Pretendard','Noto Sans KR','Malgun Gothic','Apple SD Gothic Neo',sans-serif;line-height:1.7;word-break:keep-all;box-sizing:border-box;">
-<p style="color:#ff5a5f;font-weight:700;font-size:15px;letter-spacing:.5px;margin:0 0 6px;">윤성디앤씨가 일하는 방식</p>
-<h2 style="font-size:30px;line-height:1.3;margin:0 0 10px;color:#222222;">분양 광고가 아니라, 확인한 자료로 안내합니다</h2>
-<p style="font-size:16px;color:#374151;margin:0 0 26px;">사옥과 작업장은 한 번 정하면 몇 년을 쓰는 공간입니다. 윤성디앤씨는 자료를 모아 현장과 맞는지 직접 확인하고, 분양사와 직접 연결해 좋은 조건을 찾은 뒤 기업이 스스로 판단할 수 있도록 돕습니다.</p>
-<div style="display:flex;flex-wrap:wrap;gap:12px;">
-<div style="flex:1 1 230px;background:#fff;border:1px solid #e8e8e8;border-top:4px solid #ff5a5f;border-radius:10px;padding:18px 20px;box-sizing:border-box;"><b style="display:block;font-size:18px;color:#222222;margin:0 0 6px;">자료 수집 · 현장 대조</b><p style="margin:0;font-size:15px;color:#374151;">사업개요, 건축물대장, 상담북을 모으고 현장과 실제로 맞는지 점검합니다. 자료끼리 숫자가 다르면 다르다고 적습니다.</p></div>
-<div style="flex:1 1 230px;background:#fff;border:1px solid #e8e8e8;border-top:4px solid #ff5a5f;border-radius:10px;padding:18px 20px;box-sizing:border-box;"><b style="display:block;font-size:18px;color:#222222;margin:0 0 6px;">평택 22곳 직접 확인</b><p style="margin:0;font-size:15px;color:#374151;">한국산업단지공단에 등록된 평택 지식산업센터 32건을 현장에서 확인해, 실제 준공·운영 중인 22곳으로 정리했습니다.</p></div>
-<div style="flex:1 1 230px;background:#fff;border:1px solid #e8e8e8;border-top:4px solid #ff5a5f;border-radius:10px;padding:18px 20px;box-sizing:border-box;"><b style="display:block;font-size:18px;color:#222222;margin:0 0 6px;">분양사 직접 연결</b><p style="margin:0;font-size:15px;color:#374151;">시행·분양 주체와 직접 소통해, 그 시점에 받을 수 있는 가장 좋은 분양조건을 찾아 드리도록 노력합니다.</p></div>
-<div style="flex:1 1 230px;background:#fff;border:1px solid #e8e8e8;border-top:4px solid #ff5a5f;border-radius:10px;padding:18px 20px;box-sizing:border-box;"><b style="display:block;font-size:18px;color:#222222;margin:0 0 6px;">실제 부담액으로 비교</b><p style="margin:0;font-size:15px;color:#374151;">분양가만이 아니라 취득세 감면 요건, 관리비, 대출 조건까지 더해 기업이 실제로 부담할 금액으로 호실을 비교합니다.</p></div>
 </div>
-<a href="portfolio.html" style="display:inline-block;margin:16px 0 0;font-size:15px;font-weight:700;color:#ff5a5f;text-decoration:none;">평택 지식산업센터 22곳 권역별 정리 보기 →</a>
+</section>
 
-<h3 style="font-size:21px;color:#222222;margin:52px 0 14px;padding-left:12px;border-left:4px solid #ff5a5f;line-height:1.4;">상담은 이렇게 진행됩니다</h3>
-<div style="display:flex;flex-wrap:wrap;gap:12px;">
-<div style="flex:1 1 220px;border:1px solid #e8e8e8;border-radius:10px;padding:16px 18px;background:#fff;box-sizing:border-box;"><span style="display:inline-block;font-size:13px;font-weight:700;color:#fff;background:#ff5a5f;border-radius:999px;padding:2px 10px;margin:0 0 8px;">STEP 1</span><b style="display:block;font-size:16px;color:#222222;margin:0 0 4px;">조건 확인</b><p style="margin:0;font-size:14.5px;color:#374151;">업종, 필요 면적, 차량·설비, 입주 시기를 먼저 듣습니다.</p></div>
-<div style="flex:1 1 220px;border:1px solid #e8e8e8;border-radius:10px;padding:16px 18px;background:#fff;box-sizing:border-box;"><span style="display:inline-block;font-size:13px;font-weight:700;color:#fff;background:#ff5a5f;border-radius:999px;padding:2px 10px;margin:0 0 8px;">STEP 2</span><b style="display:block;font-size:16px;color:#222222;margin:0 0 4px;">호실 후보 비교</b><p style="margin:0;font-size:14.5px;color:#374151;">조건에 맞는 호실을 추려 면적, 층고, 주차, 분양조건을 나란히 비교합니다.</p></div>
-<div style="flex:1 1 220px;border:1px solid #e8e8e8;border-radius:10px;padding:16px 18px;background:#fff;box-sizing:border-box;"><span style="display:inline-block;font-size:13px;font-weight:700;color:#fff;background:#ff5a5f;border-radius:999px;padding:2px 10px;margin:0 0 8px;">STEP 3</span><b style="display:block;font-size:16px;color:#222222;margin:0 0 4px;">현장 방문</b><p style="margin:0;font-size:14.5px;color:#374151;">후보 호실을 직접 보며 동선, 하역 공간, 주변 환경을 확인합니다.</p></div>
-<div style="flex:1 1 220px;border:1px solid #e8e8e8;border-radius:10px;padding:16px 18px;background:#fff;box-sizing:border-box;"><span style="display:inline-block;font-size:13px;font-weight:700;color:#fff;background:#ff5a5f;border-radius:999px;padding:2px 10px;margin:0 0 8px;">STEP 4</span><b style="display:block;font-size:16px;color:#222222;margin:0 0 4px;">계약 전 점검</b><p style="margin:0;font-size:14.5px;color:#374151;">입주 가능 업종, 산업단지 입주계약, 세제 요건을 계약 전에 함께 점검합니다.</p></div>
+<div class="wrap">
+<h3 class="h3" style="margin-top:0">평택 지식산업센터 권역</h3>
+<div class="areas">
+<div class="area"><b>고덕국제신도시</b><span class="num">13곳 · 46%</span><div class="bar"><i style="width:46%"></i></div></div>
+<div class="area"><b>지제역 주변</b><span class="num">5곳 · 26%</span><div class="bar"><i style="width:26%"></i></div></div>
+<div class="area"><b>진위</b><span class="num">2곳 · 7%</span><div class="bar"><i style="width:7%"></i></div></div>
+<div class="area"><b>서부(포승·청북)</b><span class="num">2곳 · 21%</span><div class="bar"><i style="width:21%"></i></div></div>
 </div>
+<p class="note">※ 단지 수 · 연면적 비중<br>출처: 한국산업단지공단 전국지식산업센터현황(2025.6.30), 윤성디앤씨 현장 확인(2026.10)</p>
 
-<h3 style="font-size:21px;color:#222222;margin:52px 0 14px;padding-left:12px;border-left:4px solid #ff5a5f;line-height:1.4;">윤성디앤씨 안내 현장</h3>
-<div style="display:flex;flex-wrap:wrap;gap:12px;">
-<a href="itower.html" style="flex:1 1 230px;display:block;box-sizing:border-box;border:1px solid #e8e8e8;border-radius:10px;padding:16px 18px;background:#fff;text-decoration:none;color:inherit;"><span style="font-size:13px;color:#6b7280;">평택 고덕 · 준공</span><b style="display:block;font-size:17px;color:#222222;margin:2px 0 6px;">고덕 지식공작소 I-TOWER</b><p style="margin:0 0 10px;font-size:14.5px;color:#374151;">드라이브인 2~4층 + 섹션오피스 5~10층 · 302실</p><span style="font-size:14px;font-weight:700;color:#ff5a5f;">현장 자세히 보기 →</span></a>
-<a href="wtower.html" style="flex:1 1 230px;display:block;box-sizing:border-box;border:1px solid #e8e8e8;border-radius:10px;padding:16px 18px;background:#fff;text-decoration:none;color:inherit;"><span style="font-size:13px;color:#6b7280;">평택 고덕 · 준공</span><b style="display:block;font-size:17px;color:#222222;margin:2px 0 6px;">고덕 지식공작소 W-TOWER</b><p style="margin:0 0 10px;font-size:14.5px;color:#374151;">드라이브인 1~5층 + 섹션오피스 6~10층 · 315실</p><span style="font-size:14px;font-weight:700;color:#ff5a5f;">현장 자세히 보기 →</span></a>
-<a href="ms1tower.html" style="flex:1 1 230px;display:block;box-sizing:border-box;border:1px solid #e8e8e8;border-radius:10px;padding:16px 18px;background:#fff;text-decoration:none;color:inherit;"><span style="font-size:13px;color:#6b7280;">평택 지제역 · 준공</span><b style="display:block;font-size:17px;color:#222222;margin:2px 0 6px;">평택지제역 MS1타워</b><p style="margin:0 0 10px;font-size:14.5px;color:#374151;">드라이브인 B2~6층 + 오피스형 7~17층 · 445실</p><span style="font-size:14px;font-weight:700;color:#ff5a5f;">현장 자세히 보기 →</span></a>
-<a href="kgsignature2.html" style="flex:1 1 230px;display:block;box-sizing:border-box;border:1px solid #e8e8e8;border-radius:10px;padding:16px 18px;background:#fff;text-decoration:none;color:inherit;"><span style="font-size:13px;color:#6b7280;">용인 광교 · 준공</span><b style="display:block;font-size:17px;color:#222222;margin:2px 0 6px;">광교 시그니처2차</b><p style="margin:0 0 10px;font-size:14.5px;color:#374151;">업무형 + 라이브오피스형 · 206실</p><span style="font-size:14px;font-weight:700;color:#ff5a5f;">현장 자세히 보기 →</span></a>
+<div class="cards" style="margin-top:22px">
+<div class="zone">
+<h4>고덕국제신도시</h4>
+<div class="tags"><span>📍 고덕면 해창리, 고덕동</span><span>🏢 택지 내 도시지원시설용지 (준주거지역) · 산단 밖</span></div>
+<p>삼성전자 평택캠퍼스와 신도시 생활권에 가까운 택지 안 도시지원시설용지입니다.</p>
+<p>제조면적 비중이 46%로 업무·지원 공간이 큰 <strong>업무형</strong> 성격이 강하고, 드라이브인과 섹션오피스를 함께 갖춘 단지가 많습니다.</p>
+<p>준주거지역이라 제조업은 도시형공장 요건을 확인해야 합니다.</p>
 </div>
-
-<h3 style="font-size:21px;color:#222222;margin:52px 0 14px;padding-left:12px;border-left:4px solid #ff5a5f;line-height:1.4;">상담 사무실 · 시장 리포트</h3>
-<div style="display:flex;flex-wrap:wrap;gap:12px;align-items:stretch;">
-<div style="flex:2 1 320px;border:1px solid #e8e8e8;border-radius:10px;padding:16px 18px;background:#fff;box-sizing:border-box;"><b style="display:block;font-size:16px;color:#222222;margin:0 0 4px;">고덕 지식공작소 107호</b><p style="margin:0;font-size:14.5px;color:#374151;">경기도 평택시 고덕면 도시지원1길 49 · 지식산업센터 단지 안에 상주하며 현장을 바로 안내합니다.</p><a href="location.html" style="display:inline-block;margin:8px 0 0;font-size:14px;font-weight:700;color:#ff5a5f;text-decoration:none;">오시는 길 →</a></div>
-<div style="flex:1 1 220px;border:1px solid #e8e8e8;border-radius:10px;padding:16px 18px;background:#fff;box-sizing:border-box;"><b style="display:block;font-size:16px;color:#222222;margin:0 0 4px;">시장 분석 리포트</b><p style="margin:0;font-size:14.5px;color:#374151;">평택 시장 동향은 블로그에 정리해 두고 있습니다.</p><a href="insight.html" style="display:inline-block;margin:8px 0 0;font-size:14px;font-weight:700;color:#ff5a5f;text-decoration:none;">시장 리포트 →</a></div>
+<div class="zone">
+<h4>지제역 주변</h4>
+<div class="tags"><span>📍 모곡동(송탄산단), 세교동(평택산단)</span><span>🏢 일반산업단지</span></div>
+<p>SRT·1호선 평택지제역 인근 일반산업단지 안에 있습니다.</p>
+<p>제조면적 비중이 73%로 생산시설 중심의 <strong>산업단지형</strong>이며, 입주 시 산업단지 관리기관(평택산업단지관리공단)과 입주계약 절차를 거칩니다.</p>
 </div>
-</div>
-<div style="max-width:1080px;margin:0 auto;padding:8px 16px 48px;color:#222222;font-family:'Pretendard','Noto Sans KR','Malgun Gothic','Apple SD Gothic Neo',sans-serif;line-height:1.7;word-break:keep-all;box-sizing:border-box;">
-<div style="margin-top:34px;background:#ff5a5f;border-radius:12px;padding:22px 22px;"><p style="margin:0 0 6px;font-size:15px;color:#fff;opacity:.92;">평택 지식산업센터 사옥 · 작업장 · 사무실 찾기 상담</p><a href="tel:15778664" style="display:inline-block;color:#fff;font-size:30px;font-weight:800;text-decoration:none;margin-right:14px;">☎ 1577-8664</a><a href="report.html" style="display:inline-block;background:#fff;color:#ff5a5f;font-size:15px;font-weight:700;text-decoration:none;padding:9px 16px;border-radius:999px;vertical-align:middle;">기업맞춤공간 컨설팅 문의 →</a></div>
-<div style="margin-top:28px;border-top:1px solid #e8e8e8;padding-top:16px;"><p style="margin:0 0 10px;font-size:14px;font-weight:700;color:#222222;">다른 현장 보기</p><div style="display:flex;flex-wrap:wrap;gap:8px;"><a href="itower.html" style="display:inline-block;border:1px solid #ff5a5f;color:#ff5a5f;font-size:14px;text-decoration:none;padding:7px 14px;border-radius:999px;">I-TOWER</a><a href="wtower.html" style="display:inline-block;border:1px solid #ff5a5f;color:#ff5a5f;font-size:14px;text-decoration:none;padding:7px 14px;border-radius:999px;">W-TOWER</a><a href="ms1tower.html" style="display:inline-block;border:1px solid #ff5a5f;color:#ff5a5f;font-size:14px;text-decoration:none;padding:7px 14px;border-radius:999px;">MS1타워</a><a href="kgsignature2.html" style="display:inline-block;border:1px solid #ff5a5f;color:#ff5a5f;font-size:14px;text-decoration:none;padding:7px 14px;border-radius:999px;">광교 시그니처2차</a></div></div>
 </div>
 
+<h3 class="h3">윤성디앤씨 안내 현장</h3>
+<div class="cards">
+<a class="site-card" href="itower.html"><b>고덕 지식공작소 I-TOWER →</b><p>고덕 해창리 · 준공 · 302실 · 드라이브인 2~4층(약 9.85~27.73평) + 섹션오피스 5~10층 · 주차 180대</p></a>
+<a class="site-card" href="wtower.html"><b>고덕 지식공작소 W-TOWER →</b><p>고덕 해창리 · 준공 · 315실 · 드라이브인 1~5층(약 16.92~38.29평) + 섹션오피스 6~10층 · 주차 322대</p></a>
+<a class="site-card" href="ms1tower.html"><b>평택지제역 MS1타워 →</b><p>송탄산업단지 · 준공 · 445실 · 드라이브인 B2~6층 + 오피스형 7~17층 · 주차 449대</p></a>
+</div>
+
+<h3 class="h3">평택 지식산업센터, 이렇게 고르세요</h3>
+<div class="scroll-x">
+<table class="guide">
+<tr><th>① 업종</th><td>사업자등록상 업종이 현행 입주 가능 업종인지 먼저 확인합니다.</td></tr>
+<tr><th>② 산단 안 · 밖</th><td>산업단지 안(지제역 주변)은 관리기관 입주계약, 밖(고덕)은 도시형공장 요건 등 절차와 조건이 다릅니다.</td></tr>
+<tr><th>③ 차량 · 설비</th><td>드라이브인이 필요하면 차량 크기, 층고, 바닥 하중, 전력 용량을 호실 단위로 확인합니다.</td></tr>
+<tr><th>④ 인원 · 확장</th><td>섹션오피스는 옆 호실을 붙여 확장할 수 있어, 2~3년 뒤 인원까지 고려해 위치를 고릅니다.</td></tr>
+<tr><th>⑤ 주차 · 관리</th><td>주차 배정 방식과 관리비 기준은 관리단 규약으로 확인합니다.</td></tr>
+</table>
+</div>
+
+<h3 class="h3">현장 사진</h3>
+<p style="margin:0 0 14px;font-size:15px;color:var(--sub)">윤성디앤씨가 안내하는 평택 지식산업센터 현장 사진은 아래에서 보실 수 있습니다.</p>
+<div class="gallery">
+<figure><a href="itower.html"><img src="assets/img/itower1.jpg" alt="고덕 지식공작소 I-TOWER 외관" loading="lazy"></a><figcaption>고덕 지식공작소 I-TOWER</figcaption></figure>
+<figure><a href="wtower.html"><img src="assets/img/wtower1.jpg" alt="고덕 지식공작소 W-TOWER 외관" loading="lazy"></a><figcaption>고덕 지식공작소 W-TOWER</figcaption></figure>
+</div>
+<div class="chips" style="margin-top:12px"><a href="itower.html">I-TOWER</a><a href="wtower.html">W-TOWER</a><a href="ms1tower.html">MS1타워</a><a href="portfolio.html">더보기</a></div>
+
+<div class="cta"><p>평택 지식산업센터 사옥 · 작업장 · 사무실 찾기 상담</p><a class="tel" href="tel:15778664">☎ 1577-8664</a><a class="go" href="report.html">기업맞춤공간 컨설팅 문의 →</a></div>
+
+<div style="margin-top:28px;border-top:1px solid var(--line);padding-top:16px">
+<p style="margin:0 0 10px;font-size:14px;font-weight:700">다른 현장 보기</p>
+<div class="chips"><a href="itower.html">I-TOWER</a><a href="wtower.html">W-TOWER</a><a href="ms1tower.html">MS1타워</a><a href="kgsignature2.html">광교 시그니처2차</a></div>
+<p class="note" style="margin-top:18px">※ 한국산업단지공단 「전국지식산업센터현황」(2025.6.30) 평택시 등록 32건 중 중복 1건과 사업 미진행·확인 불가 9건을 뺀 준공 22곳 기준(윤성디앤씨 현장 확인, 2026.10). 권역 구분은 윤성디앤씨 기준입니다.</p>
+</div>
+</div>
 </main>
 <footer class="site-footer">
 <div class="inner">
