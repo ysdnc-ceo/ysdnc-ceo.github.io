@@ -49,20 +49,33 @@
 <script>
 (function(){
   var list=document.getElementById('blog-list');
-  var rss='https://rss.blog.naver.com/kcwlove12?categoryNo=6';
-  fetch('https://api.rss2json.com/v1/api.json?rss_url='+encodeURIComponent(rss))
-    .then(function(r){return r.json();})
-    .then(function(d){
-      if(d.status!=='ok'||!d.items||!d.items.length) throw 0;
-      list.innerHTML='';
-      d.items.slice(0,5).forEach(function(p){
-        var a=document.createElement('a');
-        a.className='card'; a.href=p.link; a.target='_blank'; a.rel='noopener';
-        a.style.textDecoration='none'; a.style.color='inherit';
-        var b=document.createElement('b'); b.textContent=p.title;
-        var s=document.createElement('p'); s.textContent=(p.pubDate||'').split(' ')[0].replace(/-/g,'.');
-        a.appendChild(b); a.appendChild(s); list.appendChild(a);
-      });
+  function render(items){
+    if(!items||!items.length) throw 0;
+    list.innerHTML='';
+    items.slice(0,5).forEach(function(p){
+      var a=document.createElement('a');
+      a.className='card'; a.href=p.link; a.target='_blank'; a.rel='noopener';
+      a.style.textDecoration='none'; a.style.color='inherit';
+      var b=document.createElement('b'); b.textContent=p.title;
+      var s=document.createElement('p'); s.textContent=p.date||'';
+      a.appendChild(b); a.appendChild(s); list.appendChild(a);
+    });
+  }
+  // 1순위: GitHub Actions가 3시간마다 갱신하는 사이트 내부 파일
+  fetch('assets/blog.json?t='+Math.floor(Date.now()/600000),{cache:'no-store'})
+    .then(function(r){ if(!r.ok) throw 0; return r.json(); })
+    .then(function(d){ render(d.items); })
+    // 2순위: 외부 변환 서비스(rss2json)
+    .catch(function(){
+      var rss='https://rss.blog.naver.com/kcwlove12.xml?categoryNo=6';
+      return fetch('https://api.rss2json.com/v1/api.json?rss_url='+encodeURIComponent(rss))
+        .then(function(r){return r.json();})
+        .then(function(d){
+          if(d.status!=='ok') throw 0;
+          render((d.items||[]).map(function(p){
+            return {title:p.title,link:p.link,date:(p.pubDate||'').split(' ')[0].replace(/-/g,'.')};
+          }));
+        });
     })
     .catch(function(){ list.innerHTML='<div class="card"><p>최근 글을 불러오지 못했습니다. 아래 링크에서 블로그를 바로 보실 수 있습니다.</p></div>'; });
 })();

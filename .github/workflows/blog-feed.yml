@@ -1,0 +1,39 @@
+name: 블로그 최근 글 갱신
+
+on:
+  schedule:
+    - cron: "17 */3 * * *"   # 3시간마다
+  workflow_dispatch:          # Actions 탭에서 수동 실행 가능
+  push:
+    paths:
+      - scripts/fetch_blog.py
+      - .github/workflows/blog-feed.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: blog-feed
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 네이버 블로그 RSS 받기
+        run: python scripts/fetch_blog.py
+      - name: 변경 시 커밋
+        run: |
+          if [ -n "$(git status --porcelain assets/blog.json)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898900+github-actions[bot]@users.noreply.github.com"
+            git add assets/blog.json
+            git commit -m "블로그 최근 글 자동 갱신"
+            git push
+          else
+            echo "변경 없음"
+          fi
